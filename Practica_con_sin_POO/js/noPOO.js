@@ -8,7 +8,6 @@ document.getElementById("cedula_boton").addEventListener("click", function () {
       result.style.color = "red";
       return false;
     }
-
     const coef = [2, 1, 2, 1, 2, 1, 2, 1, 2];
     let sum = 0;
     for (let i = 0; i < 9; i++) {
@@ -19,7 +18,11 @@ document.getElementById("cedula_boton").addEventListener("click", function () {
 
     const checkDigit = parseInt(cedula.charAt(9));
     const calculatedCheckDigit = 10 - (sum % 10);
-    if (calculatedCheckDigit === 10 ? 0 : calculatedCheckDigit === checkDigit) {
+    if (
+      calculatedCheckDigit === 10
+        ? checkDigit === 0
+        : calculatedCheckDigit === checkDigit
+    ) {
       result.textContent = "Cédula válida.";
       result.style.color = "green";
     } else {
