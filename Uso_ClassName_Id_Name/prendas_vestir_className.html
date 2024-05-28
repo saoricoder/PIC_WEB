@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Selección</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Seleccione una prenda de ropa</h1>
+    <select id="menu" onchange="mostrarPrenda()">
+        <option value="0">Seleccione una opción</option>
+        <option value="1">Camiseta</option>
+        <option value="2">Pantalón</option>
+        <option value="3">Chaqueta</option>
+        <option value="4">Falda</option>
+        <option value="5">Vestido</option>
+        <option value="6">Abrigo</option>
+    </select>
+
+    <div class="prenda hidden" id="prenda1">Camiseta - Esta es la descripción de la camiseta</div>
+    <div class="prenda hidden" id="prenda2">Pantalón - Esta es la descripción del pantalón</div>
+    <div class="prenda hidden" id="prenda3">Chaqueta - Esta es la descripción de la chaqueta</div>
+    <div class="prenda hidden" id="prenda4">Falda - Esta es la descripción de la falda</div>
+    <div class="prenda hidden" id="prenda5">Vestido - Esta es la descripción del vestido</div>
+    <div class="prenda hidden" id="prenda6">Abrigo - Esta es la descripción del abrigo</div>
+
+    <script>
+        function mostrarPrenda() {
+            // Ocultar todas las prendas
+            var prendas = document.getElementsByClassName('prenda');//Uso del ClassName
+            for (var i = 0; i < prendas.length; i++) {
+                prendas[i].classList.add('hidden');
+                prendas[i].classList.remove('visible');
+            }
+
+            // Obtener el valor seleccionado del menú
+            var seleccion = document.getElementById('menu').value;
+
+            // Mostrar la prenda correspondiente
+            if (seleccion > 0 && seleccion <= 6) {
+                var prendaSeleccionada = document.getElementById('prenda' + seleccion);//Uso del Id
+                prendaSeleccionada.classList.remove('hidden');
+                prendaSeleccionada.classList.add('visible');
+            }
+        }
+    </script>
+</body>
+
+</html>
