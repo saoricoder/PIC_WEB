@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+.logo {
+  font-size: 32px;
+}
+.logo a {
+  padding: 0 0 0 4rem;
+  text-decoration: none;
+  color: #e018ae;
+  background: url(../assets/saoricoder.jpg) no-repeat center left / 4rem;
+}
+h1 {
+  color: #e018ae;
+}
+
+.button {
+  display: inline-block;
+  background-color: #800080;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #9932cc;
+  font-weight: bold;
+}

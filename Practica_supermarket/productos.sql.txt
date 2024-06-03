@@ -1,0 +1,14 @@
+USE supermarket;
+
+    CREATE TABLE proveedores (
+        codigoProveedor INT AUTO_INCREMENT PRIMARY KEY,
+        nombreProveedor VARCHAR(150)
+    );
+
+    CREATE TABLE producto (
+        codigoProducto VARCHAR(50) PRIMARY KEY,
+        nombreProducto VARCHAR(150),
+        precioProducto DECIMAL(10, 2),
+        codigoProveedor INT,
+        FOREIGN KEY (codigoProveedor) REFERENCES proveedores(codigoProveedor)
+    );
