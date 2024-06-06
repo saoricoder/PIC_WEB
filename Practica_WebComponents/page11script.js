@@ -8,7 +8,7 @@ class Section extends HTMLElement {
     this.p = document.createElement("p");
   } //Fin del constructor
   connectedCallback() {
-    this.p.textContent = "Estamos en el metodo ConnectedCallBack";
+    this.p.textContent = "Practicando el motodo de callback";
     this.appendChild(this.p);
   }
 } //Fin de la clase elemento 1
