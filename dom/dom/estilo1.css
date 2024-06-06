@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    padding: 15px;
+    text-align: justify;
+    background: khaki;
+    color: rgb(33, 3, 89);
+}

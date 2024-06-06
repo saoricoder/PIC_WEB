@@ -1,0 +1,1 @@
+const elemento = document.getElementById('titulo1');
