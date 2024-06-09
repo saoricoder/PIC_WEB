@@ -16,7 +16,7 @@
             <a class="home" href="../index.php">Home</a>
         </section>
         <section class="body">
-            <form action="" method="post" class="formulario">
+            <form action="./modulos.php" method="post" class="formulario" name="form_carreras">
                 <div class="input">
                     <div class="input_item">
                         <label for="id_carrera">ID Carrera</label>
@@ -32,10 +32,10 @@
                     </div>
                 </div>
                 <div class="botones">
-                    <input id="agregar" type="submit" value="Agregar o Guardar">
-                    <input type="submit" value="Modificar">
-                    <input type="submit" value="Eliminar">
-                    <input type="submit" value="Listar">
+                    <input id="agregar" type="submit" value="Agregar o Guardar" name="agregar">
+                    <input id="modificar" type="submit" value="Modificar" name="modificar">
+                    <input id="eliminar" type="submit" value="Eliminar" name="eliminar">
+                    <input id="listar" type="submit" value="Listar" name="listar">
                 </div>
             </form>
             <div class="listado">
