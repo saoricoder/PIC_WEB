@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+/*Estilos generales*/
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(33, 3, 89);
+  color: #fff;
+  padding: 0 0 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.head {
+  background-color: blueviolet;
+  width: 100%;
+  padding: 1rem;
+}
+.head h1 {
+  font-size: 24px;
+}
+.body {
+  margin: 1rem;
+}
+.home {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  text-decoration: none;
+  color: #fff;
+  margin: auto 0;
+  background: url(../assets/boton-de-inicio.png) no-repeat center right / 1.5rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+/*estilos de index*/
+.menu_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_item {
+  max-width: 300px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 24px;
+}
+.item_descripcion {
+  width: 1.5rem;
+  height: 1.5rem;
+  text-decoration: none;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+.__carreras {
+  background: url(../assets/sombrero-de-graduacion.png) no-repeat center left /
+    2rem;
+}
+.__estudiantes {
+  background: url(../assets/leer.png) no-repeat center left / 2rem;
+}
+.__docentes {
+  background: url(../assets/profesor.png) no-repeat center left / 2rem;
+}
+/*estilos generales formularios*/
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 0 1rem;
+}
+.input_item {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.input_item label {
+  margin: 0 0 0.5rem;
+}
+.input_item input {
+  height: 30px;
+}
+.listado {
+  width: 100%;
+}
+.titulo {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 1rem 0 0;
+  width: 100%;
+}
+.titulo_descripcion {
+  padding: 0.5rem 1rem;
+  border: 1px solid red;
+  width: 100%;
+}
+.listado_fila {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+.fila_descripcion {
+  padding: 0.5rem 1rem;
+  border: 1px solid red;
+  width: 100%;
+}
+.__id {
+  display: flex;
+  flex-shrink: 1.2;
+}
+/*estilos carreras*/
