@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,7 +19,7 @@
             <a class="home" href="../index.php">Home</a>
         </section>
         <section class="body">
-            <form action="" method="post" class="formulario">
+            <form action="./modulos.php" method="post" class="formulario">
                 <div class="input">
                     <div class="input_item">
                         <label for="id_estudiante">ID Estudiante</label>
@@ -32,10 +35,12 @@
                     </div>
                 </div>
                 <div class="botones">
-                    <input id="agregar" type="submit" value="Agregar o Guardar">
-                    <input type="submit" value="Modificar">
-                    <input type="submit" value="Eliminar">
-                    <input type="submit" value="Listar">
+                    <input id="agregar" type="submit" value="Agregar o Guardar" name="agregar">
+                    <input id="modificar" type="submit" value="Modificar" name="modificar">
+                    <input id="eliminar" type="submit" value="Eliminar" name="eliminar">
+                    <input id="listar" type="submit" value="listar" name="listado">
+                    <input type="hidden" value='<?php echo $_SERVER['PHP_SELF']; ?>' name="page">
+                    <input type="hidden" name="modulo" value="estudiantes">
                 </div>
             </form>
             <div class="listado">
@@ -44,11 +49,16 @@
                     <li class="titulo_descripcion">Cedula del estudiante</li>
                     <li class="titulo_descripcion">Carrera</li>
                 </ul>
-                <ul class="listado_fila">
-                    <li class="fila_descripcion __id">1234567898</li>
-                    <li class="fila_descripcion">Una carrera</li>
-                    <li class="fila_descripcion">Alguna carrera</li>
-                </ul>
+                <?php
+
+                if ($_SESSION['listar'] == 1) {
+                    include_once './action/listar.php';
+                } else {
+                    echo '<ul class="listado_fila">
+                            <li style="justify-content: center;" class="fila_descripcion __id"> Presione Listar para ver</li>
+                        </ul>';
+                }
+                ?>
             </div>
         </section>
         <footer>

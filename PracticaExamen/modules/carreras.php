@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -35,7 +38,9 @@
                     <input id="agregar" type="submit" value="Agregar o Guardar" name="agregar">
                     <input id="modificar" type="submit" value="Modificar" name="modificar">
                     <input id="eliminar" type="submit" value="Eliminar" name="eliminar">
-                    <input id="listar" type="submit" value="Listar" name="listar">
+                    <input id="listar" type="submit" value="listar" name="listado">
+                    <input type="hidden" value='<?php echo $_SERVER['PHP_SELF']; ?>' name="page">
+                    <input type="hidden" name="modulo" value="carreras">
                 </div>
             </form>
             <div class="listado">
@@ -44,11 +49,16 @@
                     <li class="titulo_descripcion">Nombre de la Carrera</li>
                     <li class="titulo_descripcion">Director de Carrera</li>
                 </ul>
-                <ul class="listado_fila">
-                    <li class="fila_descripcion __id">1234567898</li>
-                    <li class="fila_descripcion">Una carrera</li>
-                    <li class="fila_descripcion">Dr. Algo como esto</li>
-                </ul>
+                <?php
+
+                if ($_SESSION['listar'] == 1) {
+                    include_once './action/listar.php';
+                } else {
+                    echo '<ul class="listado_fila">
+                            <li style="justify-content: center;" class="fila_descripcion __id"> Presione Listar para ver</li>
+                        </ul>';
+                }
+                ?>
             </div>
         </section>
         <footer>

@@ -1,3 +1,7 @@
+<?php
+include_once './modules/conexion.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,9 +20,9 @@
         </div>
         <section class="body">
             <ul class="menu_container">
-                <li class="menu_item">Carreras<a href="./module/carreras.php" class="item_descripcion __carreras"></a></li>
-                <li class="menu_item">Estudiantes<a href="./module/estudiantes.php" class="item_descripcion __estudiantes"></a></li>
-                <li class="menu_item">Docentes<a href="./module/docentes.php" class="item_descripcion __docentes"></a></li>
+                <li class="menu_item">Carreras<a href="./modules/carreras.php" class="item_descripcion __carreras"></a></li>
+                <li class="menu_item">Estudiantes<a href="./modules/estudiantes.php" class="item_descripcion __estudiantes"></a></li>
+                <li class="menu_item">Docentes<a href="./modules/docentes.php" class="item_descripcion __docentes"></a></li>
             </ul>
         </section>
         <footer>
