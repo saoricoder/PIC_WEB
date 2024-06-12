@@ -31,7 +31,9 @@ session_start();
                     </div>
                     <div class="input_item">
                         <label for="carrera">Carrera</label>
-                        <input type="text" name="carrera" id="carrera">
+                        <?php
+                        include_once './action/load_data.php';
+                        ?>
                     </div>
                 </div>
                 <div class="botones">

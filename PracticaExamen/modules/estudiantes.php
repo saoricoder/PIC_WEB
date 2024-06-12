@@ -19,11 +19,14 @@ session_start();
             <a class="home" href="../index.php">Home</a>
         </section>
         <section class="body">
-            <form action="./modulos.php" method="post" class="formulario">
+            <div class="mensaje">
+                <h1 class="mensaje_text"><?php echo $_SESSION["mensaje"]; ?></h1>
+            </div>
+            <form action="./modulos.php" method="post" class="formulario" name="form_estudiantes" id="form_estudiantes">
                 <div class="input">
                     <div class="input_item">
-                        <label for="id_estudiante">ID Estudiante</label>
-                        <input type="text" name="id_estudiante" id="id_estudiante">
+                        <label for="id_estudiantes">ID Estudiante</label>
+                        <input type="text" name="id_estudiantes" id="id_estudiantes">
                     </div>
                     <div class="input_item">
                         <label for="cedula_estudiante">Cedula del estudiante</label>
@@ -31,7 +34,9 @@ session_start();
                     </div>
                     <div class="input_item">
                         <label for="carrera">Carrera</label>
-                        <input type="text" name="carrera" id="carrera">
+                        <?php
+                        include_once './action/load_data.php';
+                        ?>
                     </div>
                 </div>
                 <div class="botones">

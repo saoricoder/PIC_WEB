@@ -1,5 +1,5 @@
 <?php
-include_once './modules/conexion.php';
+include_once './modules/session.php';
 
 ?>
 <!DOCTYPE html>

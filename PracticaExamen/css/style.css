@@ -94,6 +94,10 @@ body {
 .input_item input {
   height: 30px;
 }
+.select {
+  height: 30px;
+}
+
 .listado {
   width: 100%;
 }
