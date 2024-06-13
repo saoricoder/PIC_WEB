@@ -22,7 +22,7 @@ session_start();
             <div class="mensaje">
                 <h1 class="mensaje_text"><?php echo $_SESSION["mensaje"]; ?></h1>
             </div>
-            <form action="./modulos.php" method="post" class="formulario" name="form_estudiantes" id="form_estudiantes">
+            <form action="./modulos.php" method="post" class="formulario" name="form_academico" id="form_academico">
                 <div class="input">
                     <div class="input_item">
                         <label for="id_estudiantes">ID Estudiante</label>

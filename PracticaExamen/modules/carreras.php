@@ -19,11 +19,14 @@ session_start();
             <a class="home" href="../index.php">Home</a>
         </section>
         <section class="body">
+            <div class="mensaje">
+                <h1 class="mensaje_text"><?php echo $_SESSION["mensaje"]; ?></h1>
+            </div>
             <form action="./modulos.php" method="post" class="formulario" name="form_carreras">
                 <div class="input">
                     <div class="input_item">
-                        <label for="id_carrera">ID Carrera</label>
-                        <input type="text" name="id_carrera" id="id_carrera">
+                        <label for="id_carreras">ID Carrera</label>
+                        <input type="text" name="id_carreras" id="id_carreras">
                     </div>
                     <div class="input_item">
                         <label for="nombre_carrera">Nombre de la Carrera</label>

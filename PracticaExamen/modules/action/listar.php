@@ -44,19 +44,25 @@ switch ($modulo) {
                                 <li style="justify-content: center;" class="fila_descripcion __id"> No hay alumnos guardados</li>
                             </ul>';
                             } else {
-                                $sql_estudiantes = "SELECT * FROM $modulo";
-                                if ($result = $conn->query($sql_estudiantes)) {
+                                $sql = "SELECT * FROM $modulo";
+                                $i = 0;
+                                if ($result = $conn->query($sql)) {
                                     while ($row = mysqli_fetch_array($result)) {
-                                        $id_estudiante = $row["id_estudiantes"];
-                                        $cedula = $row["cedula_estudiante"];
-                                        $id_carrera = $row["id_carrera"];
-                                        $sql_carrera = "SELECT * FROM carrera WHERE id_carrera=$id_carrera";
-                                        if ($result_carrera = $conn->query($sql_carrera)) {
-                                            echo '<ul class="listado_fila">
-                                                <li class="fila_descripcion __id"> ' . $id_estudiante . '</li>
-                                                <li class="fila_descripcion">' . $cedula . '</li>
-                                                <li class="fila_descripcion">' . $row["nombre_carrera"] . '</li>
-                                            </ul>';
+                                        $id_estudiante[$i] = $row["id_estudiantes"];
+                                        $cedula[$i] = $row["cedula_estudiante"];
+                                        $id_carrera[$i] = $row["id_carrera"];
+                                        $i += 1;
+                                    }
+                                    for ($i = 0; $i < count($id_carrera); $i++) {
+                                        $sql_carrera = "SELECT * FROM carreras WHERE id_carreras=$id_carrera[$i]";
+                                        if ($result = $conn->query($sql_carrera)) {
+                                            if ($row = mysqli_fetch_array($result)) {
+                                                echo '<ul class="listado_fila">
+                                                    <li class="fila_descripcion __id"> ' . $id_estudiante[$i] . '</li>
+                                                    <li class="fila_descripcion">' . $cedula[$i] . '</li>
+                                                    <li class="fila_descripcion">' . $row["nombre_carrera"] . '</li>
+                                                </ul>';
+                                            }
                                         }
                                     }
                                 }
@@ -68,7 +74,52 @@ switch ($modulo) {
         }
         break;
     case 'docentes':
-        $sql = "SELECT COUNT(id_$modulo) AS total FROM $modulo";
+        $sql = "SELECT COUNT(id_carreras) AS total FROM carreras";
+
+        if ($result = $conn->query($sql)) {
+            if ($row = mysqli_fetch_array($result)) {
+                if ($row['total'] == 0) {
+                    echo '<ul class="listado_fila">
+                            <li style="justify-content: center;" class="fila_descripcion __id"> Por favor, crea como mínimo una carrera antes de agregar alumnos.</li>
+                        </ul>';
+                } else {
+                    $sql = "SELECT COUNT(id_docentes) AS total FROM $modulo";
+
+                    if ($result = $conn->query($sql)) {
+                        if ($row = mysqli_fetch_array($result)) {
+                            if ($row['total'] == 0) {
+                                echo '<ul class="listado_fila">
+                                <li style="justify-content: center;" class="fila_descripcion __id"> No hay docentes guardados</li>
+                            </ul>';
+                            } else {
+                                $sql = "SELECT * FROM $modulo";
+                                $i = 0;
+                                if ($result = $conn->query($sql)) {
+                                    while ($row = mysqli_fetch_array($result)) {
+                                        $id_docente[$i] = $row["id_docentes"];
+                                        $cedula[$i] = $row["cedula_docente"];
+                                        $id_carrera[$i] = $row["id_carrera"];
+                                        $i += 1;
+                                    }
+                                    for ($i = 0; $i < count($id_carrera); $i++) {
+                                        $sql_carrera = "SELECT * FROM carreras WHERE id_carreras=$id_carrera[$i]";
+                                        if ($result = $conn->query($sql_carrera)) {
+                                            if ($row = mysqli_fetch_array($result)) {
+                                                echo '<ul class="listado_fila">
+                                                    <li class="fila_descripcion __id"> ' . $id_docente[$i] . '</li>
+                                                    <li class="fila_descripcion">' . $cedula[$i] . '</li>
+                                                    <li class="fila_descripcion">' . $row["nombre_carrera"] . '</li>
+                                                </ul>';
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         break;
     default:
         echo '<ul class="listado_fila">

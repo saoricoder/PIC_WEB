@@ -1,6 +1,7 @@
 <?php
 include_once './session.php';
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $modulo = $_POST['modulo'];
     $listar = empty($_POST['listado']) ? "vacio" : $_POST['listado'];
@@ -15,7 +16,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: ' . $page);
         exit();
     } else if ($save != "vacio") {
-        include_once './action/save.php';
+        // Si todos los campos se han enviado, entonces, «$post» será «true»,
+        // de lo contrario será «false»:
+        $modul = substr($modulo, 0, -1);
+        if ($modulo != "carreras") {
+            $post = (isset($_POST['id_' . $modulo . '']) && isset($_POST['cedula_' . $modul . '']) && isset($_POST['carrera']) && !empty($_POST['id_' . $modulo . '']) && !empty($_POST['cedula_' . $modul . '']) && !empty($_POST['carrera']));
+        } else {
+            $post = (isset($_POST['id_' . $modulo . '']) && isset($_POST['nombre_carrera']) && isset($_POST['director_carrera'])  && !empty($_POST['id_' . $modulo . '']) && !empty($_POST['nombre_carrera']) && !empty($_POST['director_carrera']));
+        }
+
+        // Si $post es true (verdadero), entonces se guardaran los datos:
+        if ($post) {
+            include_once './action/save.php';
+        } else {
+            // Si en cambio, es false (falso), entonces volverá al formulario desde
+            // donde se envió la petición:
+            $_SESSION['mensaje'] = "Debe rellenar los campos solicitados";
+            header('Location: ' . $page);
+        }
     } else if ($modificar != "vacio") {
     } else if ($eliminar != "vacio") {
     }
