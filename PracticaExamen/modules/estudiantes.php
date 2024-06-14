@@ -1,5 +1,11 @@
 <?php
 session_start();
+function unique_id($l = 10)
+{
+    return substr(md5(uniqid(mt_rand(), true)), 0, $l);
+}
+
+$id_generate = 'acaes-' . unique_id(5);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -26,7 +32,7 @@ session_start();
                 <div class="input">
                     <div class="input_item">
                         <label for="id_estudiantes">ID Estudiante</label>
-                        <input type="text" name="id_estudiantes" id="id_estudiantes">
+                        <input type="text" name="id_estudiantes" id="id_estudiantes" value="<?php echo $id_generate; ?>">
                     </div>
                     <div class="input_item">
                         <label for="cedula_estudiante">Cedula del estudiante</label>

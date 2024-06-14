@@ -1,29 +1,34 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "angel2857";
-$dbname = "academica";
+include_once './action/conexion.php';
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
 $modulo = trim($_SESSION['modulo']);
 
 
 switch ($modulo) {
     case 'carreras':
-        $sql = "SELECT * FROM $modulo";
+        $sql = "SELECT COUNT(id_carreras) AS total FROM carreras";
+
         if ($result = $conn->query($sql)) {
-            while ($row = mysqli_fetch_array($result)) {
-                echo '<ul class="listado_fila">
+            if ($row = mysqli_fetch_array($result)) {
+                if ($row['total'] == 0) {
+                    echo '<ul class="listado_fila">
+                    <li style="justify-content: center;" class="fila_descripcion __id"> No hay carreras agregadas</li>
+                </ul>';
+                } else {
+                    $sql = "SELECT * FROM $modulo";
+                    if ($result = $conn->query($sql)) {
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo '<ul class="listado_fila">
                             <li class="fila_descripcion __id"> ' . $row["id_carreras"] . '</li>
                             <li class="fila_descripcion">' . $row["nombre_carrera"] . '</li>
                             <li class="fila_descripcion">' . $row["director_carrera"] . '</li>
                         </ul>';
+                        }
+                    }
+                }
             }
         }
+
         break;
     case 'estudiantes':
         $sql = "SELECT COUNT(id_carreras) AS total FROM carreras";
@@ -53,7 +58,7 @@ switch ($modulo) {
                                         $id_carrera[$i] = $row["id_carrera"];
                                         $i += 1;
                                     }
-                                    for ($i = 0; $i < count($id_carrera); $i++) {
+                                    for ($i = 0; $i < count($id_estudiante); $i++) {
                                         $sql_carrera = "SELECT * FROM carreras WHERE id_carreras=$id_carrera[$i]";
                                         if ($result = $conn->query($sql_carrera)) {
                                             if ($row = mysqli_fetch_array($result)) {
@@ -100,6 +105,7 @@ switch ($modulo) {
                                         $cedula[$i] = $row["cedula_docente"];
                                         $id_carrera[$i] = $row["id_carrera"];
                                         $i += 1;
+                                        echo $id_carrera[$i];
                                     }
                                     for ($i = 0; $i < count($id_carrera); $i++) {
                                         $sql_carrera = "SELECT * FROM carreras WHERE id_carreras=$id_carrera[$i]";
@@ -126,15 +132,4 @@ switch ($modulo) {
                 <li style="justify-content: center;" class="fila_descripcion __id"> Ocurrio un error lo estamos resolviendo</li>
             </ul>';
         break;
-}
-
-//lectura del total de datos  en la base de datos
-
-
-$sql = "SELECT * FROM $modulo";
-
-if ($result = $conn->query($sql)) {
-    if ($row = mysqli_fetch_array($result)) {
-    } else {
-    }
 }

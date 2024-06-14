@@ -1,14 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "angel2857";
-$dbname = "academica";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+include_once './action/conexion.php';
 
 $sql = "SELECT * FROM carreras";
 if ($result = $conn->query($sql)) {
@@ -20,4 +11,5 @@ if ($result = $conn->query($sql)) {
         echo '<option value="' . $row["id_carreras"] . '">' . $row["nombre_carrera"] . '</option>';
     }
     echo '</select>';
+    echo $row['id_carreras'];
 }

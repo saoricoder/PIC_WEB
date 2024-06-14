@@ -1,14 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "angel2857";
-$dbname = "academica";
+include_once './action/conexion.php';
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
 $page = $_POST['page'];
 $modulo = $_POST['modulo'];
 
