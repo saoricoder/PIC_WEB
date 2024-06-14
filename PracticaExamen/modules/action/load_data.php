@@ -11,5 +11,4 @@ if ($result = $conn->query($sql)) {
         echo '<option value="' . $row["id_carreras"] . '">' . $row["nombre_carrera"] . '</option>';
     }
     echo '</select>';
-    echo $row['id_carreras'];
 }
