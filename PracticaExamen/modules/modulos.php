@@ -56,6 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header('Location: ' . $page);
             exit();
         }
+    } else if ($prueba != "vacio") {
+        $_SESSION['mensaje'] = "exito";
+        $_SESSION["evento"] = 'boton.click();';
+        header('Location: ' . $page);
+        exit();
     }
     /*else {
     header('Location: ../modules/carreras.php');

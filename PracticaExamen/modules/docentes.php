@@ -16,6 +16,7 @@ $id_generate = 'acado-' . unique_id(5);
     <title>Docentes</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script defer type="module" src="../js/components/poput-component.js"></script>
 </head>
 
 <body>

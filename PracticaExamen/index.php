@@ -23,6 +23,7 @@ include_once './modules/session.php';
                 <li class="menu_item">Carreras<a href="./modules/carreras.php" class="item_descripcion __carreras"></a></li>
                 <li class="menu_item">Estudiantes<a href="./modules/estudiantes.php" class="item_descripcion __estudiantes"></a></li>
                 <li class="menu_item">Docentes<a href="./modules/docentes.php" class="item_descripcion __docentes"></a></li>
+                <li class="menu_item">Entorno de Pruebas<a href="./modules/pruebas.php" class="item_descripcion __pruebas"></a></li>
             </ul>
         </section>
         <footer>

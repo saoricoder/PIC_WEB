@@ -16,6 +16,7 @@ $id_generate = 'acaca-' . unique_id(5);
     <title>Carreras</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script defer type="module" src="../js/components/poput-component.js"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@ $id_generate = 'acaca-' . unique_id(5);
             <div class="mensaje">
                 <h1 class="mensaje_text"><?php echo $_SESSION["mensaje"]; ?></h1>
             </div>
-            <form action="./modulos.php" method="post" class="formulario" name="form_carreras">
+            <form action="./modulos.php" method="post" class="formulario" name="form_academico" id="form_academico">
                 <div class="input">
                     <div class="input_item">
                         <label for="id_carreras">ID Carrera</label>

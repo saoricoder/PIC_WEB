@@ -5,7 +5,7 @@ function unique_id($l = 10)
     return substr(md5(uniqid(mt_rand(), true)), 0, $l);
 }
 
-$id_generate = 'acaes-' . unique_id(5);
+$id_generate = 'prueba-' . unique_id(5);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,53 +13,58 @@ $id_generate = 'acaes-' . unique_id(5);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudiantes</title>
+    <title>Carreras</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <script defer type="module" src="../js/components/poput-component.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <section class="head">
-            <h1>Estudiantes</h1>
+            <h1>Carreras</h1>
             <a class="home" href="../index.php">Home</a>
         </section>
         <section class="body">
             <div class="mensaje">
-                <h1 class="mensaje_text"><?php echo $_SESSION["mensaje"]; ?></h1>
+                <h1 id="mensaje"><?php echo $_SESSION["mensaje"]; ?></h1>
+                <input type="button" value="poput" style="display: none;" id="poput_mensaje">
+                <script>
+                    window.onload = function() {
+                        const boton = document.getElementById("poput_mensaje");
+                        <?php echo $_SESSION["evento"]; ?>
+                    }
+                </script>
             </div>
             <form action="./modulos.php" method="post" class="formulario" name="form_academico" id="form_academico">
                 <div class="input">
                     <div class="input_item">
-                        <label for="id_estudiantes">ID Estudiante</label>
-                        <input type="text" name="id_estudiantes" id="id_estudiantes" value="<?php echo $id_generate; ?>">
+                        <label for="id_carreras">ID Carrera</label>
+                        <input type="text" name="id_carreras" id="id_carreras" value="<?php echo $id_generate; ?>">
                     </div>
                     <div class="input_item">
-                        <label for="cedula_estudiante">Cedula del estudiante</label>
-                        <input type="text" name="cedula_estudiante" id="cedula_estudiante">
+                        <label for="nombre_carrera">Nombre de la Carrera</label>
+                        <input type="text" name="nombre_carrera" id="nombre_carrera">
                     </div>
                     <div class="input_item">
-                        <label for="carrera">Carrera</label>
-                        <?php
-                        include_once './action/load_data.php';
-                        ?>
+                        <label for="director_carrera">Director de Carrera</label>
+                        <input type="text" name="director_carrera" id="director_carrera">
                     </div>
                 </div>
                 <div class="botones">
-                    <input id="agregar" type="submit" value="Agregar o Guardar" name="agregar">
-                    <input id="modificar" type="submit" value="Modificar" name="modificar">
-                    <input id="eliminar" type="submit" value="Eliminar" name="eliminar">
-                    <input id="listar" type="submit" value="listar" name="listado">
+                    <input id="agregar" type="submit" value="Agregar o Guardar" name="prueba">
+                    <input id="modificar" type="submit" value="Modificar" name="prueba">
+                    <input id="eliminar" type="submit" value="Eliminar" name="prueba">
+                    <input id="listar" type="submit" value="listar" name="prueba">
                     <input type="hidden" value='<?php echo $_SERVER['PHP_SELF']; ?>' name="page">
-                    <input type="hidden" name="modulo" value="estudiantes">
+                    <input type="hidden" name="modulo" value="carreras">
                 </div>
             </form>
             <div class="listado">
                 <ul class="titulo">
-                    <li class="titulo_descripcion __id">ID Estudiante</li>
-                    <li class="titulo_descripcion">Cedula del estudiante</li>
-                    <li class="titulo_descripcion">Carrera</li>
+                    <li class="titulo_descripcion __id">ID Carrera</li>
+                    <li class="titulo_descripcion">Nombre de la Carrera</li>
+                    <li class="titulo_descripcion">Director de Carrera</li>
                 </ul>
                 <?php
 
@@ -77,7 +82,6 @@ $id_generate = 'acaes-' . unique_id(5);
             <h2>Desarrollado por Yo mismo</h2>
         </footer>
     </div>
-
 </body>
 
 </html>

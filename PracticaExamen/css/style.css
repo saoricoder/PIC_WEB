@@ -1,3 +1,4 @@
+@import url(./poput.css);
 * {
   box-sizing: border-box;
 }
@@ -5,6 +6,7 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden;
 }
+
 /*Estilos generales*/
 .container {
   width: 100vw;
@@ -68,6 +70,9 @@ body {
 }
 .__docentes {
   background: url(../assets/profesor.png) no-repeat center left / 2rem;
+}
+.__pruebas {
+  background: url(../assets/pruebas.png) no-repeat center left / 2rem;
 }
 /*estilos generales formularios*/
 .formulario {
