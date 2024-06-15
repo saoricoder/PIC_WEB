@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">
+        <h1>Hola desde el DIV</h1>
+    </div>
+    <template id="myTemplate">
+        <h1>Hola desde el template</h1>
+    </template>
+    
+</body>
+
+<script>
+
+    //Localizamos el elemnto template
+    const template=document.querySelector('#myTemplate');
+
+    //Declaramos una nueva variable y clonamos el contenido del template
+    const templateClone=document.importNode(template.content,true);
+
+    //Inyectamos el contenido del template en el documento
+    document.body.appendChild(templateClone);
+    
+</script>
+</html>
