@@ -16,20 +16,18 @@ $id_generate = 'acado-' . unique_id(5);
     <title>Docentes</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <script defer type="module" src="../js/components/poput-component.js"></script>
+    <script defer src="../js/components/jquery-3.7.1.js"></script>
+    <script defer type="module" src="../js/poput-component.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <section class="head">
             <h1>Docentes</h1>
             <a class="home" href="../index.php">Home</a>
         </section>
         <section class="body">
-            <div class="mensaje">
-                <h1 class="mensaje_text"><?php echo $_SESSION["mensaje"]; ?></h1>
-            </div>
-            <form action="./modulos.php" method="post" class="formulario" name="form_academico" id="form_academico">
+            <form class="formulario" name="form_academico" id="form_academico">
                 <div class="input">
                     <div class="input_item">
                         <label for="id_docentes">ID Docente</label>
@@ -45,14 +43,16 @@ $id_generate = 'acado-' . unique_id(5);
                         include_once './action/load_data.php';
                         ?>
                     </div>
+                    <div>
+                        <input type="hidden" value='<?php echo $_SERVER['PHP_SELF']; ?>' name="page">
+                        <input type="hidden" name="modulo" value="docentes" id="modulo">
+                    </div>
                 </div>
                 <div class="botones">
                     <input id="agregar" type="submit" value="Agregar o Guardar" name="agregar">
                     <input id="modificar" type="submit" value="Modificar" name="modificar">
                     <input id="eliminar" type="submit" value="Eliminar" name="eliminar">
                     <input id="listar" type="submit" value="listar" name="listado">
-                    <input type="hidden" value='<?php echo $_SERVER['PHP_SELF']; ?>' name="page">
-                    <input type="hidden" name="modulo" value="docentes">
                 </div>
             </form>
             <div class="listado">

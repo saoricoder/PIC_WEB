@@ -16,27 +16,18 @@ $id_generate = 'prueba-' . unique_id(5);
     <title>Carreras</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <script defer type="module" src="../js/components/poput-component.js"></script>
+    <script defer src="../js/components/jquery-3.7.1.js"></script>
+    <script defer type="module" src="../js/poput-component.js"></script>
 </head>
 
 <body>
     <div class="container" id="container">
         <section class="head">
-            <h1>Carreras</h1>
+            <h1><a class="link_title" href="./pruebas.php">Entorno de Pruebas</a></h1>
             <a class="home" href="../index.php">Home</a>
         </section>
         <section class="body">
-            <div class="mensaje">
-                <h1 id="mensaje"><?php echo $_SESSION["mensaje"]; ?></h1>
-                <input type="button" value="poput" style="display: none;" id="poput_mensaje">
-                <script>
-                    window.onload = function() {
-                        const boton = document.getElementById("poput_mensaje");
-                        <?php echo $_SESSION["evento"]; ?>
-                    }
-                </script>
-            </div>
-            <form action="./modulos.php" method="post" class="formulario" name="form_academico" id="form_academico">
+            <form class="formulario" name="form_academico" id="form_academico">
                 <div class="input">
                     <div class="input_item">
                         <label for="id_carreras">ID Carrera</label>
@@ -50,14 +41,16 @@ $id_generate = 'prueba-' . unique_id(5);
                         <label for="director_carrera">Director de Carrera</label>
                         <input type="text" name="director_carrera" id="director_carrera">
                     </div>
+                    <div>
+                        <input type="hidden" value='<?php echo $_SERVER['PHP_SELF']; ?>' name="page">
+                        <input type="hidden" name="modulo" value="prueba" id="modulo">
+                    </div>
                 </div>
                 <div class="botones">
                     <input id="agregar" type="submit" value="Agregar o Guardar" name="prueba">
                     <input id="modificar" type="submit" value="Modificar" name="prueba">
                     <input id="eliminar" type="submit" value="Eliminar" name="prueba">
                     <input id="listar" type="submit" value="listar" name="prueba">
-                    <input type="hidden" value='<?php echo $_SERVER['PHP_SELF']; ?>' name="page">
-                    <input type="hidden" name="modulo" value="carreras">
                 </div>
             </form>
             <div class="listado">
