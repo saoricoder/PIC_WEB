@@ -1,25 +1,26 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Aplicación de Mensajes</title>
 </head>
-
 <body>
-    <h1>Formulario de Mensaje</h1>
-    <form id="mensajeForm">
-        <input type="text" id="mensajeInput" placeholder="Ingrese su mensaje" required>
-        <button type="button" id="boton1">Mostrar Mensaje 1</button>
-        <button type="button" id="boton2">Mostrar Mensaje 2</button>
+    <h1>Aplicación de Mensajes</h1>
+    <form>
+        <label for="entrada1">Control1:</label>
+        <input type="text" id="entrada1">
+        <br>
+        <button type="button" id="boton1">Enviar Mensaje</button>
+        <button type="button" id="boton2">Personalizar Mensaje</button>
     </form>
+    <div id="mensajeDiv1"></div>
+    <div id="mensajeDiv2"></div>
+    <p id="mensajeP1"></p>
+    <p id="mensajeP2"></p>
 
-    <custom-message id="mensaje1"></custom-message>
-    <custom-message id="mensaje2"></custom-message>
-
-    <script src="componente12.js"></script>
+    <script src="mensaje.js"></script>
 </body>
-
+</html>
 </html>
