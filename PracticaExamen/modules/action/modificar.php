@@ -14,7 +14,7 @@ if (mysqli_num_rows($result_check_id) > 0) {
         $nombre_carrera =  trim($_POST['nombre_carrera']);
         $director_carrera = trim($_POST['director_carrera']);
 
-        $sql_update = "UPDATE carreras SET  nombre_carrera=$nombre_carrera , director_carrera=$director_carrera WHERE id_carreras=$id_carrera ";
+        $sql_update = "UPDATE carreras SET  nombre_carrera='$nombre_carrera' , director_carrera='$director_carrera' WHERE id_carreras='$id_carrera' ";
 
         if ($conn->query($sql_update) === TRUE) {
             $_SESSION['mensaje'] = "Datos actualizados con exito";
