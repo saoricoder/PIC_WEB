@@ -1,32 +1,35 @@
 
-class CustomMessage extends HTMLElement {
+class Mensaje {
     constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+        this.input = document.getElementById('entrada1');
+        this.boton1 = document.getElementById('boton1');
+        this.boton2 = document.getElementById('boton2');
+        this.mensajeDiv1 = document.getElementById('mensajeDiv1');
+        this.mensajeDiv2 = document.getElementById('mensajeDiv2');
+        this.mensajeP1 = document.getElementById('mensajeP1');
+        this.mensajeP2 = document.getElementById('mensajeP2');
+        this.init();
     }
 
-    connectedCallback() {
-        this.shadowRoot.innerHTML = `<p>${this.getAttribute('message')}</p>`;
+    init() {
+        this.boton1.addEventListener('click', () => this.enviarMensaje());
+        this.boton2.addEventListener('click', () => this.personalizarMensaje());
     }
 
-    static get observedAttributes() {
-        return ['message'];
+    enviarMensaje() {
+        const mensaje = this.input.value;
+        this.mensajeDiv1.textContent = `Mensaje enviado: ${mensaje}`;
+        this.mensajeP1.textContent = `Mensaje en el párrafo: ${mensaje}`;
     }
 
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (name === 'message') {
-            this.shadowRoot.innerHTML = `<p>${newValue}</p>`;
-        }
+    personalizarMensaje() {
+        const mensaje = this.input.value;
+        this.mensajeDiv2.textContent = `Mensaje personalizado: ${mensaje}`;
+        this.mensajeP2.textContent = `Mensaje en el párrafo personalizado: ${mensaje}`;
     }
 }
 
-document.getElementById('boton1').addEventListener('click', () => {
-    const mensaje = document.getElementById('mensajeInput').value;
-    document.getElementById('mensaje1').setAttribute('message', mensaje);
+// Inicializar la clase Mensaje cuando el DOM esté cargado
+document.addEventListener('DOMContentLoaded', () => {
+    new Mensaje();
 });
-
-document.getElementById('boton2').addEventListener('click', () => {
-    const mensaje = document.getElementById('mensajeInput').value;
-    document.getElementById('mensaje2').setAttribute('message', mensaje);
-});
-customElements.define('custom-message', CustomMessage);
