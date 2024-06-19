@@ -1,0 +1,33 @@
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.form_item {
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  height: 32px;
+  border: 3px solid rgb(225, 0, 255);
+  font-size: 1.2rem;
+}
+
+button {
+  height: 40px;
+  border: 3px solid rgb(225, 0, 255);
+  font-family: inherit;
+  margin-right: 5px;
+}
+
+#host {
+  margin-top: 20px;
+}
+
+.stilo {
+  color: #ff0000;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3rem;
+}

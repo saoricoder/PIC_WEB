@@ -1,3 +1,4 @@
+
 class Calculadora extends HTMLElement {
   constructor() {
     super();
@@ -27,15 +28,25 @@ class Calculadora extends HTMLElement {
     const btnDividir = document.querySelector("#btnDividir");
 
     if (btnSumar)
-      btnSumar.addEventListener("click", () => this.operar("sumar"));
+      btnSumar.addEventListener("click", (event) => {
+        event.preventDefault();
+        this.operar("sumar");
+      });
     if (btnRestar)
-      btnRestar.addEventListener("click", () => this.operar("restar"));
+      btnRestar.addEventListener("click", (event) => {
+        event.preventDefault();
+        this.operar("restar");
+      });
     if (btnMultiplicar)
-      btnMultiplicar.addEventListener("click", () =>
-        this.operar("multiplicar")
-      );
+      btnMultiplicar.addEventListener("click", (event) => {
+        event.preventDefault();
+        this.operar("multiplicar");
+      });
     if (btnDividir)
-      btnDividir.addEventListener("click", () => this.operar("dividir"));
+      btnDividir.addEventListener("click", (event) => {
+        event.preventDefault();
+        this.operar("dividir");
+      });
   }
 
   operar(operacion) {
@@ -54,6 +65,7 @@ class Calculadora extends HTMLElement {
       alert("Por favor, introduce números entre 1 y 100");
       return;
     }
+
     let resultado;
     // Realizar la operación correspondiente
     switch (operacion) {
@@ -71,7 +83,7 @@ class Calculadora extends HTMLElement {
           alert("No se puede dividir por cero");
           return;
         }
-        this.resultado = n1 / n2;
+        resultado = n1 / n2;
         break;
       default:
         alert("Operación no válida");
@@ -80,19 +92,17 @@ class Calculadora extends HTMLElement {
 
     // Mostrar el resultado en el input de resultado
     const host = document.getElementById("host");
-    const shadow = host.attachShadow({ mode: "open" });
-    const h1 = document.createElement("h1");
-    h1.textContent = resultado;
-    shadow.appendChild(h1);
+    const shadow = host.shadowRoot || host.attachShadow({ mode: "open" });
+    shadow.innerHTML = `<h1>Resultado: ${resultado}</h1>`;
   }
 }
 
 // Definir el nuevo elemento personalizado
 customElements.define("componente-calculadora", Calculadora);
+
 document.addEventListener("DOMContentLoaded", function () {
   let form = document.getElementById("form");
-  form.addEventListener("submit", noaction);
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
 });
-function noaction(event) {
-  event.preventDefault();
-}
