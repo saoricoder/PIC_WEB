@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0e7ff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #005cbf;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #005cbf;
+}
+
+p {
+    color: #333;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-container .team-info, .details-container .players-info {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.details-container .players-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.details-container .player {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.details-container .player h3 {
+    margin: 0 0 5px;
+    font-size: 1.2em;
+}
+
+.details-container .player p {
+    margin: 2px 0;
+}

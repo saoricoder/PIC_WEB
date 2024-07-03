@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente de texto para el cuerpo de la página */
+    margin: 20px; /* Margen de 20px alrededor del cuerpo de la página */
+}
+
+.box {
+    width: 200px; /* Ancho de la caja */
+    height: 100px; /* Altura de la caja */
+    background-color: lightblue; /* Color de fondo de la caja */
+    text-align: center; /* Alineación del texto al centro */
+    line-height: 100px; /* Altura de línea para centrar verticalmente el texto */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre la caja */
+}
+
+form {
+    margin-bottom: 20px; /* Margen inferior de 20px para el formulario */
+}
+
+#domManipulation p {
+    color: blue; /* Color del texto del párrafo */
+}
+
+#domManipulation p.changed {
+    color: red; /* Color del texto del párrafo cuando se cambia */
+}

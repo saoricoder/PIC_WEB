@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Web con Web Components</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">MiApp</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigate('home')">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigate('about')">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigate('contact')">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Contenido dinámico -->
+        <div id="content"></div>
+    </div>
+
+    <script src="components/home.js"></script>
+    <script src="components/about.js"></script>
+    <script src="components/contact.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

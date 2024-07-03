@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalización de Tarjeta</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Personalización de Tarjeta</h1>
+    <div class="control-panel">
+        <label for="bgColor">Color de Fondo:</label>
+        <input type="color" id="bgColor" name="bgColor">
+        
+        <label for="imgSize">Tamaño de Imagen:</label>
+        <input type="range" id="imgSize" name="imgSize" min="50" max="300">
+        
+        <label for="textAlign">Alineación del Texto:</label>
+        <select id="textAlign" name="textAlign">
+            <option value="left">Izquierda</option>
+            <option value="center">Centro</option>
+            <option value="right">Derecha</option>
+            <option value="justify">Justificar</option>
+        </select>
+
+        <label for="imgUpload">Subir Imagen:</label>
+        <input type="file" id="imgUpload" name="imgUpload" accept="image/*">
+        
+        <label for="cardTitle">Título de la Tarjeta:</label>
+        <input type="text" id="cardTitle" name="cardTitle" placeholder="Título de la Tarjeta">
+        
+        <label for="cardContent">Contenido de la Tarjeta:</label>
+        <textarea id="cardContent" name="cardContent" placeholder="Contenido de la Tarjeta"></textarea>
+    </div>
+    <div id="customCard" class="card">
+        <img id="cardImage" src="https://via.placeholder.com/150" alt="Imagen de la Tarjeta">
+        <h2 id="cardTitleDisplay">Título de la Tarjeta</h2>
+        <p id="cardContentDisplay">Contenido de la tarjeta. Puedes personalizar esta tarjeta utilizando los controles de arriba.</p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Datos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ingreso de Datos</h1>
+    </header>
+    <main>
+        <section id="form-section">
+            <h2>Ingresar Datos</h2>
+            <form id="data-form">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required>
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" name="descripcion" required>
+                <button type="submit">Guardar</button>
+            </form>
+            <nav>
+                <button onclick="window.location.href='list.html'">Listar Datos</button>
+                <button onclick="window.location.href='modify.html'">Modificar Datos</button>
+                <button onclick="window.location.href='delete.html'">Eliminar Datos</button>
+            </nav>
+        </section>
+    </main>
+    <footer>
+        <p>Pie de página con información adicional.</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>

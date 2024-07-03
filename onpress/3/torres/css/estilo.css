@@ -1,0 +1,21 @@
+/* Estilo para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente Arial con respaldo sans-serif */
+    background-color: #f8f9fa; /* Establece el color de fondo */
+}
+
+/* Estilo para el título principal (h1) */
+h1 {
+    color: #007bff; /* Establece el color del texto */
+}
+
+/* Estilo para el contenedor con el ID "content" */
+#content {
+    margin-top: 50px; /* Establece un margen superior de 50px */
+}
+
+/* Estilo para el párrafo con el ID "textParagraph" */
+#textParagraph {
+    font-size: 18px; /* Establece el tamaño de la fuente a 18px */
+    color: #333; /* Establece el color del texto */
+}

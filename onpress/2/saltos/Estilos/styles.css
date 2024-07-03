@@ -1,0 +1,50 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding-top: 60px; /* Para dejar espacio para el navbar */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Para que esté encima del contenido */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+#resultado {
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+
+#fotoPreview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#fotoPreview img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+}

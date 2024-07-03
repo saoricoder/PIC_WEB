@@ -1,0 +1,300 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Fuente más moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo más claro */
+    color: #333; /* Color de texto principal */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #007BFF; /* Azul primario */
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Espacio entre elementos de la lista */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+main {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #007BFF; /* Color de título más llamativo */
+}
+
+p {
+    color: #666;
+}
+
+ul {
+    list-style: disc inside;
+    color: #666;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 15px; /* Mayor espacio entre elementos de lista */
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Mayor espacio interno */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333; /* Color de texto más oscuro */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para botones */
+button, .btn {
+    padding: 12px 25px; /* Mayor tamaño de botones */
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para formularios */
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 500px; /* Ancho máximo para el formulario */
+    margin: 0 auto;
+}
+
+form label {
+    color: #333;
+    font-weight: bold;
+}
+
+form input[type="text"], 
+form input[type="number"],
+form select,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Bordes más redondeados */
+    font-size: 16px;
+}
+
+form button, form .btn {
+    align-self: flex-start;
+    padding: 12px 20px;
+    background-color: #28a745; /* Verde */
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover, form .btn:hover {
+    background-color: #218838;
+}
+
+/* Estilos específicos para los botones */
+#botones {
+    text-align: center;
+    margin-bottom: 30px; /* Mayor espacio inferior */
+}
+
+#botones button, #botones .btn {
+    padding: 15px 35px; /* Mayor tamaño de botones */
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 15px; /* Mayor espacio entre botones */
+    transition: background-color 0.3s ease;
+}
+
+#botones button:hover, #botones .btn:hover {
+    background-color: #0056b3;
+}
+
+.boton-grande {
+    padding: 15px 35px;
+    background-color: #28a745; /* Color de fondo verde */
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Bordes más redondeados */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-mediano {
+    padding: 10px 25px; /* Tamaño ligeramente mayor */
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-grande:hover, .boton-mediano:hover {
+    background-color: #218838;
+}
+
+/* Iconos */
+.icon {
+    margin-right: 5px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.icon-lg {
+    font-size: 24px;
+}
+
+.icon-md {
+    font-size: 18px;
+}
+
+.icon-sm {
+    font-size: 14px;
+}
+
+.icon-primary {
+    color: #007BFF;
+}
+
+.icon-secondary {
+    color: #28a745;
+}
+
+.icon-danger {
+    color: #dc3545;
+}
+
+.icon-warning {
+    color: #ffc107;
+}
+
+.icon-info {
+    color: #17a2b8;
+}
+
+.icon-light {
+    color: #f8f9fa;
+}
+
+.icon-dark {
+    color: #343a40;
+}
+
+/* Estilos de grilla */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card h2 {
+    color: #007BFF;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

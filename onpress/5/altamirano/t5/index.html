@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalización de Página</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Personalización de Elementos</h1>
+    <form id="customizationForm">
+        <label for="bgColor">Color de fondo:</label>
+        <input type="color" id="bgColor" name="bgColor">
+        
+        <label for="textColor">Color del texto:</label>
+        <input type="color" id="textColor" name="textColor">
+        
+        <label for="fontSize">Tamaño de fuente:</label>
+        <input type="number" id="fontSize" name="fontSize" min="10" max="50">
+        
+        <button type="button" id="applyChanges">Aplicar Cambios</button>
+    </form>
+    
+    <customizable-content>
+        <p>Este es un párrafo de ejemplo. Personalízame usando el formulario de arriba.</p>
+    </customizable-content>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

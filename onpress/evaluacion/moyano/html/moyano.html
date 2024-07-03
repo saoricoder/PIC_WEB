@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contenidos con Estilos W3C</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Encabezado Principal UFA ESPE</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="main-section">
+        <div class="container">
+            <div id="section-text-container" class="content-box">
+                <p id="texto-section">Texto de la sección</p>
+                <button onclick="modificarTexto()">Modificar Texto</button>
+            </div>
+            <div id="section-img-container" class="content-box">
+                <img id="imagen-section" width="100px" src="imagen-section_1.jpg" alt="Imagen de la sección">
+                <button onclick="modificarImagen()">Modificar Imagen</button>
+            </div>
+            <div id="section-video-container" class="content-box">
+                <video id="video-section" controls>
+                    <source src="video-section.mp4" width="100px" height="140" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <button onclick="modificarVideo()">Modificar Video</button>
+            </div>
+            <div id="section-audio-container" class="content-box">
+                <audio id="audio-section" controls>
+                    <source src="audio-section.mp3" type="audio/mp3">
+                    Tu navegador no soporta la etiqueta de audio.
+                </audio>
+                <button onclick="modificarAudio()">Modificar Audio</button>
+            </div>
+            <div class="content-box">
+                <form id="page-selection-form" onsubmit="redirectToSelectedPage(); return false;">
+                    <label for="page-select">Selecciona la página de destino:</label>
+                    <select id="page-select">
+                        <option value="deportes.html">deportes.html</option>
+                        <option value="pagina1.html">pagina1.html</option>
+                        <option value="pagina2.html">pagina2.html</option>
+                    </select>
+                    <button type="submit">Guardar y Redirigir</button>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Pie de página con información adicional. COPYRIGTH ESPE</p>
+    </footer>
+
+    <script src="../js/modificador.js"></script>
+    <script>
+        function redirectToSelectedPage() {
+    const form = document.getElementById('page-selection-form');
+    const select = document.getElementById('page-select');
+    const selectedPage = select.value;
+    window.location.href = selectedPage;
+}
+
+    </script>
+</body>
+
+</html>

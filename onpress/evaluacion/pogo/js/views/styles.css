@@ -1,0 +1,54 @@
+/* Estilos para formularios */
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para la lista de ingresos */
+.lista-ingresos {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.lista-ingresos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lista-ingresos th, .lista-ingresos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.lista-ingresos th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}

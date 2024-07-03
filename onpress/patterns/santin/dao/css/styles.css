@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#daoExplanation {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#userList {
+    text-align: center;
+}
+
+#userList h2 {
+    margin-bottom: 10px;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.user-item button {
+    margin-left: 10px;
+}

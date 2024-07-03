@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Encabezado, Pie de Página y Navegación</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        /* Botones */
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Encabezado, Pie de Página y Navegación */
+        header, footer, nav {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            background-color: #fef213da;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        /* Contenido de la sección principal */
+        #main-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .content-box {
+            width: 45%;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box p {
+            margin-bottom: 10px;
+        }
+
+        /* Footer específico */
+        footer {
+            text-align: center;
+            color: #666666;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seleccion del Ecuador</h1>
+        <button onclick="modificarHeader()">Modificar Encabezado</button>
+        <button onclick="modificarFooter()">Modificar Pie de Página</button>
+        <button onclick="modificarNav()">Modificar Navegación</button>
+    </div>
+
+    <header id="header">
+        <h1>Encabezado Principal UFA ESPE</h1>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="main-section">
+        <div id="section-text-container" class="content-box">
+            <p id="texto-section">Texto de la sección</p>
+            <button onclick="modificarTexto()">Modificar Texto</button>
+        </div>
+        <div id="section-img-container" class="content-box">
+            <img id="imagen-section" src="imagen-section_1.jpg" alt="Imagen de la sección">
+            <button onclick="modificarImagen()">Modificar Imagen</button>
+        </div>
+        <div id="section-video-container" class="content-box">
+            <video id="video-section" controls>
+                <source src="video-section.mp4" width="360" height="640" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <button onclick="modificarVideo()">Modificar Video</button>
+        </div>
+        <div id="section-audio-container" class="content-box">
+            <audio id="audio-section" controls>
+                <source src="audio-section.mp3" type="audio/mp3">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+            <button onclick="modificarAudio()">Modificar Audio</button>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>Pie de página con información adicional. COPYRIGHT ESPE</p>
+    </footer>
+
+    <script>
+        function modificarHeader() {
+            let nuevoContenido = prompt('Ingrese el nuevo contenido para el encabezado:');
+            if (nuevoContenido !== null) {
+                document.getElementById('header').innerHTML = `<h1>${nuevoContenido}</h1>`;
+            }
+        }
+
+        function modificarFooter() {
+            let nuevoContenido = prompt('Ingrese el nuevo contenido para el pie de página:');
+            if (nuevoContenido !== null) {
+                document.getElementById('footer').innerHTML = `<p>${nuevoContenido}</p>`;
+            }
+        }
+
+        function modificarNav() {
+            let nuevoContenido = prompt('Ingrese el nuevo contenido para la barra de navegación:');
+            if (nuevoContenido !== null) {
+                let lista = nuevoContenido.split(',').map(item => `<li>${item.trim()}</li>`).join('');
+                document.getElementById('nav').innerHTML = `<ul>${lista}</ul>`;
+            }
+        }
+
+        function modificarTexto() {
+            let nuevoTexto = prompt('Ingrese el nuevo texto para la sección:');
+            if (nuevoTexto !== null) {
+                document.getElementById('texto-section').innerText = nuevoTexto;
+            }
+        }
+
+        function modificarImagen() {
+            let nuevaImagen = prompt('Ingrese la URL de la nueva imagen:');
+            if (nuevaImagen !== null) {
+                document.getElementById('imagen-section').src = nuevaImagen;
+            }
+        }
+
+        function modificarVideo() {
+            let nuevoVideo = prompt('Ingrese la URL del nuevo video:');
+            if (nuevoVideo !== null) {
+                document.getElementById('video-section').src = nuevoVideo;
+            }
+        }
+
+        function modificarAudio() {
+            let nuevoAudio = prompt('Ingrese la URL del nuevo audio:');
+            if (nuevoAudio !== null) {
+                document.getElementById('audio-section').src = nuevoAudio;
+            }
+        }
+    </script>
+</body>
+</html>

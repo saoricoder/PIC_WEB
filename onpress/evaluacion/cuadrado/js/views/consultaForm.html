@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Información</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Consultar Información</h2>
+        <form id="consulta-form">
+            <input type="text" id="consulta-codigo" placeholder="Código">
+            <input type="text" id="consulta-descripcion" placeholder="Descripción">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <!-- Script para manejar el formulario de consulta -->
+    <script src="../controllers/ingresoController.js"></script>
+    <script>
+        document.getElementById('consulta-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let codigo = document.getElementById('consulta-codigo').value;
+            let descripcion = document.getElementById('consulta-descripcion').value;
+            // Mostrar los resultados en una tabla o de la manera que desees.
+            
+
+        });
+    </script>
+</body>
+</html>

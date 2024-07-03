@@ -1,0 +1,43 @@
+body {
+    background-color:#222;
+    color:#CCC;
+  }
+  
+  #wrapper {
+    display:block;
+    width:500px;
+    margin:0px auto;
+  }
+  
+  #wrapper div {
+    text-align:center;
+  }
+  
+  .saludo {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+  }
+  
+  .nombre {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    min-height: 90px;
+  }
+  
+  .promocion {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+  }
+  .tag {
+    font-size: 0.8em;
+  }
+  #pic {
+    display:block;
+    width: 120px;
+    height:120px;
+    margin: 0px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 50%;
+  }

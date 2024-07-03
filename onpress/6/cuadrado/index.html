@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Interactiva</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicación Interactiva</h1>
+    </header>
+    
+    <nav class="menu">
+        <ul>
+            <li><a href="#mouse-section">Manejo de Mouse</a></li>
+            <li><a href="#form-section">Manejo de Formulario</a></li>
+            <li><a href="#keyboard-section">Manejo de Teclado</a></li>
+            <li><a href="#dom-section">Manipulación del DOM</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="mouse-section">
+            <h2>Manejo de Mouse</h2>
+            <button id="mouseButton">Haz clic aquí</button>
+            <p id="mouseMessage"></p>
+        </section>
+
+        <section id="form-section">
+            <h2>Manejo de Formulario</h2>
+            <form id="sampleForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name">
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="keyboard-section">
+            <h2>Manejo de Teclado</h2>
+            <input type="text" id="textInput" placeholder="Escribe algo...">
+            <p id="keyboardMessage"></p>
+        </section>
+
+        <section id="dom-section">
+            <h2>Manipulación del DOM</h2>
+            <button id="addButton">Añadir Elemento</button>
+            <ul id="domList"></ul>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

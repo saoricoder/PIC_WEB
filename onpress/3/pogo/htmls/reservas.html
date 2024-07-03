@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Reservas</h2>
+        <a href="../index.html"><button class="btn btn-warning my-3">Regresar</button></a>
+        <button class="btn btn-primary my-3" id="addReservaBtn">Crear Reserva</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Número de Personas</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="reservas-list">
+                <!-- Lista de reservas -->
+            </tbody>
+        </table>
+    </div>
+    <div id="formulario-reserva" class="container mt-5" style="display:none;">
+        <h3 id="form-titulo-reserva">Crear Reserva</h3>
+        <form id="form-reserva">
+            <input type="hidden" id="reserva-id">
+            <div class="form-group">
+                <label for="reserva-fecha">Fecha</label>
+                <input type="date" class="form-control" id="reserva-fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="reserva-hora">Hora</label>
+                <input type="time" class="form-control" id="reserva-hora" required>
+            </div>
+            <div class="form-group">
+                <label for="reserva-numeroPersonas">Número de Personas</label>
+                <input type="number" class="form-control" id="reserva-numeroPersonas" required>
+            </div>
+            <div class="form-group">
+                <label for="reserva-estado">Estado</label>
+                <select class="form-control" id="reserva-estado" required>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="confirmada">Confirmada</option>
+                    <option value="cancelada">Cancelada</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+            <button type="button" class="btn btn-secondary" id="cancelarReservaBtn">Cancelar</button>
+        </form>
+    </div>
+    <script src="../js/reservas.js"></script>
+</body>
+</html>

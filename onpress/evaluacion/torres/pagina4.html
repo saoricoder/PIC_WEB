@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Encabezado, Pie de Página y Navegación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Página para Modificar Encabezado, Pie de Página y Navegación</h1>
+        <button onclick="modificarHeader()">Modificar Encabezado</button>
+        <button onclick="modificarFooter()">Modificar Pie de Página</button>
+        <button onclick="modificarNav()">Modificar Navegación</button>
+    </div>
+
+    <header id="header">
+        <h1>Encabezado Principal UFA ESPE</h1>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="main-section">
+        <div id="section-text-container" class="content-box">
+            <p id="texto-section">Texto de la sección</p>
+            <button onclick="modificarTexto()">Modificar Texto</button>
+        </div>
+        <div id="section-img-container" class="content-box">
+            <img id="imagen-section" src="imagen-section_1.jpg" alt="Imagen de la sección">
+            <button onclick="modificarImagen()">Modificar Imagen</button>
+        </div>
+        <div id="section-video-container" class="content-box">
+            <video id="video-section" controls>
+                <source src="video-section.mp4" width="360" height="640" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <button onclick="modificarVideo()">Modificar Video</button>
+        </div>
+        <div id="section-audio-container" class="content-box">
+            <audio id="audio-section" controls>
+                <source src="audio-section.mp3" type="audio/mp3">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+            <button onclick="modificarAudio()">Modificar Audio</button>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>Pie de página con información adicional. COPYRIGHT ESPE</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="modificador4.js"></script>
+</body>
+</html>

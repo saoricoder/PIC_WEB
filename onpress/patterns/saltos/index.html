@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrones de Diseño - Decorator & Visitor</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Personalización de Productos</h1>
+    <div id="app">
+        <h2>Seleccione un producto y personalícelo</h2>
+        <div>
+            <label for="product">Elija un producto:</label>
+            <select id="product">
+                <option value="basic">Producto Básico</option>
+                <option value="premium">Producto Premium</option>
+            </select>
+        </div>
+        <div>
+            <h3>Añadidos:</h3>
+            <button id="add-feature1">Agregar Característica 1</button>
+            <button id="add-feature2">Agregar Característica 2</button>
+            <button id="add-feature3">Agregar Característica 3</button>
+        </div>
+        <div>
+            <h3>Precio Final: <span id="price">0</span></h3>
+        </div>
+        <div>
+            <h3>Detalle del Producto:</h3>
+            <pre id="details"></pre>
+        </div>
+    </div>
+    <script src="js/decorator.js"></script>
+    <script src="js/visitor.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

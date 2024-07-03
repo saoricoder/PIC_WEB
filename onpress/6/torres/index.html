@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos en Web</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Eventos Web</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#mouse-event">Mouse Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#focus-event">Focus Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#keyboard-event">Keyboard Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dom-event">DOM Event</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="mouse-event" class="section">
+      <div class="container">
+        <h2>Mouse Event</h2>
+        <p>Click on the button to see mouse event.</p>
+        <button id="mouse-btn" class="btn btn-primary">Click me!</button>
+        <p id="mouse-message"></p>
+      </div>
+    </section>
+
+    <section id="focus-event" class="section">
+      <div class="container">
+        <h2>Focus Event</h2>
+        <input type="text" id="focus-input" class="form-control" placeholder="Click here">
+        <p id="focus-message"></p>
+      </div>
+    </section>
+
+    <section id="keyboard-event" class="section">
+      <div class="container">
+        <h2>Keyboard Event</h2>
+        <input type="text" id="keyboard-input" class="form-control" placeholder="Type something">
+        <p id="keyboard-message"></p>
+      </div>
+    </section>
+
+    <section id="dom-event" class="section">
+      <div class="container">
+        <h2>DOM Event with Web Components</h2>
+        <div id="custom-component"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

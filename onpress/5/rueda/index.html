@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Personalizado</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="customForm">
+            <label for="txtMensaje">Mensaje:</label>
+            <input type="text" id="txtMensaje" name="txtMensaje" required>
+            <button type="submit">Enviar</button>
+            <br><br>
+            <!-- Custom elements -->
+            <mi-boton></mi-boton>
+            <mi-texto></mi-texto>
+            <mi-imagen src="img/haunter.jpg"></mi-imagen>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

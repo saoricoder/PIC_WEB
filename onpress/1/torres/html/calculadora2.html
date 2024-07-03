@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora POO</title>
+    <link href="../css/estiloCalculadora2.cs" rel="stylesheet">
+</head>
+<body>
+    <div class="Calculadora">
+        <input type="text" id="num1" placeholder="Primer número">
+        <input type="text" id="num2" placeholder="Segundo número">
+        <div>
+            <button onclick="Calculadora.calcular('suma')">+</button>
+            <button onclick="Calculadora.calcular('resta')">-</button>
+            <button onclick="Calculadora.calcular('multiplica')">*</button>
+            <button onclick="Calculadora.calcular('divide')">/</button>
+        </div>
+        <input type="text" id="result" placeholder="Resultado" readonly>
+    </div>
+	<! -- _______________________ -->
+	<! -- Clase : Calculadora     -->
+	<! -- Code  : javascript poo  -->
+	<! -- _______________________ -->
+
+    <script src="../js/calculadora2.js">
+
+    </script>
+</body>
+</html>

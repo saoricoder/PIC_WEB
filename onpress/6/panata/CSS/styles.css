@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+}
+
+.menu-item:hover {
+    background-color: #0056b3;
+}
+
+.menu-item.active {
+    background-color: #28a745;
+}
+
+.menu-item.grow {
+    transform: scale(1.1);
+}
+
+.menu-item.text-filled {
+    background-color: #ffc107;
+}

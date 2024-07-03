@@ -1,0 +1,21 @@
+/* Estilos adicionales personalizados */
+body {
+    background-color: #f8f9fa; /* Color de fondo */
+}
+.container {
+    background-color: #ffffff; /* Fondo de contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+.btn-pink {
+    background-color: #e83e8c; /* Color de fondo rosa */
+    border-color: #e83e8c; /* Color de borde rosa */
+    color: #ffffff; /* Color de texto blanco */
+}
+.btn-pink:hover,
+.btn-pink:focus {
+    background-color: #d4357e; /* Color de fondo rosa oscuro al pasar el ratón */
+    border-color: #d4357e; /* Color de borde rosa oscuro al pasar el ratón */
+    color: #ffffff; /* Color de texto blanco */
+}

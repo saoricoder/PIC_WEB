@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Maquillaje</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Tienda de Maquillaje</h1>
+        <div id="product-list">
+            <!-- Aquí se listarán los productos dinámicamente -->
+        </div>
+        <div id="order-list">
+            <h2>Mi Pedido</h2>
+            <ul id="order-items">
+                <!-- Aquí se mostrarán los productos añadidos al pedido -->
+            </ul>
+            <p>Total: <span id="order-total">$0.00</span></p>
+            <button class="btn btn-pink btn-block" onclick="checkout()">Realizar Pedido</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Tu archivo JavaScript personalizado -->
+    <script src="scripts/app.js"></script>
+</body>
+</html>
+

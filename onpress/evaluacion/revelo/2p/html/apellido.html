@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apellido - Página de Ejemplo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Apellido - Página de Ejemplo</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../deportes.html">Inicio</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div id="section-text-container" class="content-box">
+                <h2>Texto</h2>
+                <p id="texto-deporte">Texto de deporte</p>
+                <button onclick="mostrarTextoDeporte()">Mostrar Texto de Deporte</button>
+            </div>
+            <div id="section-img-container" class="content-box">
+                <h2>Imagen</h2>
+                <img id="imagen-deporte" src="" alt="Imagen de la página deportes">
+                <button onclick="mostrarImagenDeporte()">Mostrar Imagen de Deporte</button>
+            </div>
+            <div id="section-video-container" class="content-box">
+                <h2>Video</h2>
+                <video id="video-deporte" controls>
+                    <source src="" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <button onclick="mostrarVideoDeporte()">Mostrar Video de Deporte</button>
+            </div>
+            <div id="section-audio-container" class="content-box">
+                <h2>Audio</h2>
+                <audio id="audio-deporte" controls>
+                    <source src="" type="audio/mp3">
+                    Tu navegador no soporta la etiqueta de audio.
+                </audio>
+                <button onclick="mostrarAudioDeporte()">Mostrar Audio de Deporte</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Pie de página con información adicional. COPYRIGHT ESPE</p>
+    </footer>
+
+    <script>
+        function mostrarTextoDeporte() {
+            let textoDeporte = localStorage.getItem('texto-section');
+            if (textoDeporte) {
+                document.getElementById('texto-deporte').textContent = textoDeporte;
+            }
+        }
+
+        function mostrarImagenDeporte() {
+            let imgSrc = localStorage.getItem('imagen-section');
+            if (imgSrc) {
+                document.getElementById('imagen-deporte').src = imgSrc;
+            }
+        }
+
+        function mostrarVideoDeporte() {
+            let videoDeporte = localStorage.getItem('video-section');
+            if (videoDeporte) {
+                let video = document.getElementById('video-deporte');
+                let source = video.getElementsByTagName('source')[0];
+                source.src = videoDeporte;
+                video.load();
+            }
+        }
+
+        function mostrarAudioDeporte() {
+            let audioDeporte = localStorage.getItem('audio-section');
+            if (audioDeporte) {
+                let audio = document.getElementById('audio-deporte');
+                let source = audio.getElementsByTagName('source')[0];
+                source.src = audioDeporte;
+                audio.load();
+            }
+        }
+
+        // Función para mostrar mensaje si no hay datos
+        window.onload = function() {
+            let textoDeporte = localStorage.getItem('texto-section');
+            let imagenDeporte = localStorage.getItem('imagen-section');
+            let videoDeporte = localStorage.getItem('video-section');
+            let audioDeporte = localStorage.getItem('audio-section');
+
+            if (!textoDeporte && !imagenDeporte && !videoDeporte && !audioDeporte) {
+                let mensaje = document.createElement('p');
+                mensaje.textContent = 'No hay datos disponibles desde deportes.html';
+                mensaje.style.padding = '10px';
+                mensaje.style.textAlign = 'center';
+                document.querySelector('.container').appendChild(mensaje);
+            }
+        }
+    </script>
+</body>
+</html>

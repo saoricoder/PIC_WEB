@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Página Inicial</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="html/futbol.html">Futbol</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Bienvenido a la Página Inicial</h2>
+        <p>Este es el contenido principal de la página de inicio.</p>
+
+        <div id="page-selection">
+            <h3>Páginas</h3>
+            <form id="page-form">
+                <label for="page-select">Selecciona la página:</label>
+                <select id="page-select" onchange="loadPageComponents()">
+                    <option value="html/futbol.html">Futbol</option>
+                </select>
+            </form>
+        </div>
+
+        <div id="component-selection">
+            <h3>¿Qué deseas modificar?</h3>
+            <form id="component-form">
+                <label for="component-select">Selecciona el componente:</label>
+                <select id="component-select" onchange="loadComponentContent()">
+                    <option value="header">Header</option>
+                    <option value="nav">Nav</option>
+                    <option value="section">Section</option>
+                    <option value="footer">Footer</option>
+                </select>
+            </form>
+        </div>
+
+        <div id="component-content">
+            <h3>Contenidos</h3>
+            <div id="content-display">
+                <!-- Aquí se mostrará el contenido del componente seleccionado -->
+            </div>
+            <button onclick="editContent()">Editar</button>
+            <button onclick="saveContent()">Guardar</button>
+        </div>
+
+        <iframe id="page-iframe" src="html/futbol.html" frameborder="0" width="100%" height="600px"></iframe>
+    </main>
+
+    <footer>
+        <p>Pie de página con información adicional. COPYRIGHT ESPE</p>
+    </footer>
+
+    <script src="js/editor.js"></script>
+</body>
+
+</html>

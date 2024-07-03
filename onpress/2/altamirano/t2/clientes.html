@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Clientes</title>
+  <link rel="stylesheet" href="styless.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Biblioteca Universitaria</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="libros.html">Gestión de Libros</a></li>
+          <li><a href="clientes.html">Gestión de Clientes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h2>Gestión de Clientes</h2>
+      </div>
+    </section>
+    <section class="container">
+      <form id="clientForm">
+        <label for="clientId">ID del Cliente</label>
+        <input type="text" id="clientId">
+        <label for="clientName">Nombre</label>
+        <input type="text" id="clientName">
+        <label for="clientEmail">Email</label>
+        <input type="email" id="clientEmail">
+        <label for="clientPhone">Teléfono</label>
+        <input type="text" id="clientPhone">
+        <label for="clientBookCode">Código de Libro</label>
+        <input type="text" id="clientBookCode">
+        <button type="button" onclick="addClient()">Agregar Cliente</button>
+      </form>
+      <table id="clientTable">
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Biblioteca Universitaria. Todos los derechos reservados.</p>
+      <p><a href="index.html">Volver al inicio</a></p>
+    </div>
+  </footer>
+  <script src="js/clientes.js"></script>
+</body>
+</html>

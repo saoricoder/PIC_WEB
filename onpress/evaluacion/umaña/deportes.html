@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deportes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/modificador.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Deportes</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="main-section">
+        <div class="container">
+            <div id="section-text-container" class="content-box">
+                <p id="texto-section">Texto de la sección</p>
+                <button onclick="modificarTexto()">Modificar Texto</button>
+            </div>
+            <div id="section-img-container" class="content-box">
+                <img id="imagen-section" src="imagen-section_1.jpg" alt="Imagen de la sección">
+                <button onclick="modificarImagen()">Modificar Imagen</button>
+            </div>
+            <div id="section-video-container" class="content-box">
+                <video id="video-section" controls>
+                    <source src="video-section.mp4" width="360" height="640" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <button onclick="modificarVideo()">Modificar Video</button>
+            </div>
+            <div id="section-audio-container" class="content-box">
+                <audio id="audio-section" controls>
+                    <source src="audio-section.mp3" type="audio/mp3">
+                    Tu navegador no soporta la etiqueta de audio.
+                </audio>
+                <button onclick="modificarAudio()">Modificar Audio</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="paginas">
+        <h2>Páginas Agregadas</h2>
+        <!-- Aquí se mostrarán las páginas creadas -->
+    </section>
+
+    <button onclick="crearPagina()">Crear Página</button> <!-- Botón para crear una nueva página -->
+
+    <footer>
+        <p>Pie de página con información adicional. COPYRIGHT ESPE</p>
+    </footer>
+</body>
+
+</html>

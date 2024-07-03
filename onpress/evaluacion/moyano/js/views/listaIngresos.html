@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Ingresos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lista-ingresos">
+        <h2>Listado de Ingresos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se llenarán dinámicamente los datos de los ingresos -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script para cargar dinámicamente los ingresos -->
+    <script src="../controllers/ingresoController.js"></script>
+    <script>
+        // Lógica para cargar dinámicamente los ingresos en la tabla
+        window.onload = function() {
+            let ingresos = mostrarTodosLosIngresos();
+            let tbody = document.querySelector('.lista-ingresos tbody');
+            ingresos.forEach(function(ingreso) {
+                let tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${ingreso.codigo}</td>
+                    <td>${ingreso.descripcion}</td>
+                    <td>${ingreso.cantidad}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrones de Diseño: Filter y Strategy</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Demostración de Patrones de Diseño: Filter y Strategy</h1>
+            
+        </div>
+    </header>
+    
+    <div class="container main-content">
+        <h1>Patrón Filter</h1>
+            <br>
+        <div class="products">
+            <h2>Productos</h2>
+            <ul id="product-list"></ul>
+        </div>
+        <div class="filters">
+            
+            <h2>Filtrar Productos</h2>
+            <button onclick="filterProducts()">Filtrar Electrónicos con Precio Mínimo 600</button>
+            <ul id="filtered-list"></ul>
+        </div>
+        <br>
+        <br>
+        <div class="strategies">
+            <h1>Patrón Strategy</h1>
+            <br>
+            <h2>Operaciones Matemáticas</h2>
+            <button onclick="performAddition()">10 + 5</button>
+            <button onclick="performSubtraction()">10 - 5</button>
+            <button onclick="performMultiplication()">10 * 5</button>
+            <ul id="strategy-list"></ul>
+        </div>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

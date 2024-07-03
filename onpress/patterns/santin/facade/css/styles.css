@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#facadeExplanation {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#userList {
+    text-align: center;
+}
+
+#userList h2 {
+    margin-bottom: 10px;
+}

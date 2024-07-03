@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestor de Tareas</h1>
+    </header>
+    <main>
+        <section id="lista-tareas">
+            <!-- Aquí se mostrarán las tareas -->
+        </section>
+        <section id="formulario">
+            <h2>Agregar Tarea</h2>
+            <form id="form-tarea">
+                <label for="tipoTarea">Tipo de Tarea:</label>
+                <select id="tipoTarea">
+                    <option value="simple">Simple</option>
+                    <option value="recurrente">Recurrente</option>
+                </select>
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" required>
+
+                <label for="prioridad">Prioridad:</label>
+                <select id="prioridad">
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+
+                <div id="opciones-tarea-simple" class="opciones-tarea">
+                    <label for="fechaLimite">Fecha Límite (opcional):</label>
+                    <input type="date" id="fechaLimite">
+                </div>
+
+                <div id="opciones-tarea-recurrente" class="opciones-tarea">
+                    <label for="periodicidad">Periodicidad:</label>
+                    <input type="text" id="periodicidad" placeholder="Ej. Diario, Semanal">
+                </div>
+
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="scripts/tarea.js"></script>
+    <script type="module" src="scripts/tareaSimple.js"></script>
+    <script type="module" src="scripts/tareaRecurrente.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

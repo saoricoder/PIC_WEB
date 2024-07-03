@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Personalizado</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="customForm">
+            <div class="form-group">
+                <label for="txtMensaje">Mensaje:</label>
+                <input type="text" id="txtMensaje" name="txtMensaje" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="output"></div>
+        <div class="custom-elements">
+            <!-- Custom elements -->
+            <div class="custom-container">
+                <h2>Botón Personalizado</h2>
+                <p>Este es un botón personalizado que muestra una alerta al hacer clic.</p>
+                <mi-boton></mi-boton>
+            </div>
+            <div class="custom-container">
+                <h2>Texto Personalizado</h2>
+                <p>Este es un elemento de texto personalizado.</p>
+                <mi-texto></mi-texto>
+            </div>
+            <div class="custom-container">
+                <h2>Imagen Personalizada</h2>
+                <p>Esta es una imagen personalizada con estilos aplicados.</p>
+                <mi-imagen></mi-imagen>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

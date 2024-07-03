@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizar Componente de Tarjeta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Personalizar Componente de Tarjeta</h1>
+        </header>
+        <main>
+            <div class="form-container">
+                <form id="customizeForm">
+                    <h2>Personalizar Tarjeta</h2>
+                    <label for="backgroundColor">Color de Fondo:</label>
+                    <input type="color" id="backgroundColor" name="backgroundColor" value="#ffffff">
+                    
+                    <label for="text">Texto:</label>
+                    <input type="text" id="text" name="text" placeholder="Ingrese texto">
+
+                    <label for="textColor">Color del Texto:</label>
+                    <input type="color" id="textColor" name="textColor" value="#000000">
+                    
+                    <button type="submit">Personalizar</button>
+                </form>
+            </div>
+            <card-component id="card" text="Tarjeta Personalizada" background="#ffffff" text-color="#000000"></card-component>
+        </main>
+        <footer>
+            <p>&copy; 2024 Personalizar Componente</p>
+        </footer>
+    </div>
+    <script src="../js/card-component.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

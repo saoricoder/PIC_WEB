@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contenidos con Estilos W3C</title>
+    <link rel="stylesheet" href="/PARTE II/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Marvel</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="mostrarInicio()">Inicio</a></li>
+            <li><a href="#pages" onclick="mostrarPaginas()">Páginas</a></li>
+        </ul>
+    </nav>
+
+    <section id="main-section">
+        <div class="container">
+            <div id="section-text-container" class="content-box">
+                <p id="texto-section">Texto de la sección</p>
+                <div id="text-display"></div>
+                <button onclick="modificarTexto()">Modificar Texto</button>
+            </div>
+            <div id="section-img-container" class="content-box">
+                <img id="imagen-section" src="imagen-section_1.jpg" alt="Imagen de la sección">
+                <div id="image-display"></div>
+                <button onclick="modificarImagen()">Modificar Imagen</button>
+            </div>
+            <div id="section-video-container" class="content-box">
+                <video id="video-section" controls>
+                    <source src="video-section.mp4" width="360" height="640" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                <div id="video-display"></div>
+                <button onclick="modificarVideo()">Modificar Video</button>
+            </div>
+            <div id="section-audio-container" class="content-box">
+                <audio id="audio-section" controls>
+                    <source id="audio-source" src="audio-section.mp3" type="audio/mp3">
+                    Tu navegador no soporta la etiqueta de audio.
+                </audio>
+                <div id="audio-display"></div>
+                <button onclick="modificarAudio()">Modificar Audio</button>
+            </div>
+        </div>
+        <button onclick="generarPagina()">Generar Página</button>
+    </section>
+
+    <section id="notebook-section" style="display: none;">
+        <!-- Las páginas generadas se añadirán aquí -->
+    </section>
+
+    <footer>
+        <p>Pie de página con información adicional. COPYRIGHT ESPE</p>
+    </footer>
+
+    <script src="/PARTE II/js/index.js"></script>
+</body>
+</html>

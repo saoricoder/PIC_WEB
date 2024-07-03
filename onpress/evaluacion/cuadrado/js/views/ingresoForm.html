@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Información</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Ingresar Información</h2>
+        <form id="ingreso-form">
+            <input type="text" id="codigo" placeholder="Código">
+            <input type="text" id="descripcion" placeholder="Descripción">
+            <input type="number" id="cantidad" placeholder="Cantidad">
+            <button type="submit">Agregar Ingreso</button>
+        </form>
+    </div>
+
+    <script src="../models/ingreso.js"></script>
+    <script src="../controllers/ingresoController.js"></script>
+    <script>
+        document.getElementById('ingreso-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let codigo = document.getElementById('codigo').value;
+            let descripcion = document.getElementById('descripcion').value;
+            let cantidad = parseFloat(document.getElementById('cantidad').value);
+
+            if (codigo && descripcion && !isNaN(cantidad)) {
+                agregarIngreso(codigo, descripcion, cantidad);
+                alert('Ingreso agregado correctamente.');
+                // Aquí puedes agregar más lógica, como limpiar el formulario o redireccionar a otra página.
+            } else {
+                alert('Por favor, complete todos los campos correctamente.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/* Estilos generales */
+body {
+    background-color: #f8f9fa; /* Color de fondo */
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  .card {
+    background-color: #6f42c1; /* Color de la tarjeta */
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .btn-purple {
+    background-color: #6f42c1; /* Color del botón */
+    border-color: #6f42c1;
+  }
+  
+  .btn-purple:hover {
+    background-color: #5a3b8a; /* Color del botón al pasar el mouse */
+    border-color: #5a3b8a;
+  }
+  
+  /* Estilos adicionales para el formulario */
+  #formEventInfo {
+    margin-top: 20px;
+  }
+  

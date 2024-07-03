@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Eventos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Gestión de Eventos</h1>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <button id="clickButton" class="btn btn-primary btn-lg btn-block shadow-lg">
+                    <i class="fa fa-hand-pointer"></i> Haz Clic Aquí
+                </button>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div id="hoverDiv" class="border rounded text-center p-5 shadow-lg">
+                    <i class="fa fa-mouse-pointer fa-2x"></i>
+                    <p>Pasa el mouse por aquí</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <input type="text" id="keypressInput" class="form-control form-control-lg shadow-sm" placeholder="Presiona cualquier tecla">
+            </div>
+            <div class="col-md-6 mb-4">
+                <p id="resizeMessage" class="alert alert-info shadow-sm">Redimensiona la ventana</p>
+            </div>
+        </div>
+        <div class="text-center my-4">
+            <button id="showCodeButton" class="btn btn-secondary btn-lg shadow-lg">
+                <i class="fa fa-code"></i> Visualizar Código
+            </button>
+        </div>
+        <div id="codeExplanation" style="display:none;">
+            <h2 class="text-center mb-4">Explicación de Eventos y Código</h2>
+            <div class="event-explanation">
+                <h3>Evento Click</h3>
+                <p>El evento click ocurre cuando el usuario hace clic en un botón. Al hacer clic en el botón, se muestra una alerta con el mensaje "Botón Clickeado".</p>
+                <pre><code>
+document.getElementById('clickButton').addEventListener('click', function() {
+    alert('Botón Clickeado');
+});
+                </code></pre>
+            </div>
+            <div class="event-explanation">
+                <h3>Evento Hover</h3>
+                <p>El evento hover ocurre cuando el usuario pasa el mouse sobre un elemento. El color de fondo del div cambia a verde claro al pasar el mouse y vuelve a gris claro al quitarlo.</p>
+                <pre><code>
+document.getElementById('hoverDiv').addEventListener('mouseover', function() {
+    this.style.backgroundColor = 'lightgreen';
+});
+
+document.getElementById('hoverDiv').addEventListener('mouseout', function() {
+    this.style.backgroundColor = 'lightgray';
+});
+                </code></pre>
+            </div>
+            <div class="event-explanation">
+                <h3>Evento Keypress</h3>
+                <p>El evento keypress ocurre cuando el usuario presiona una tecla en el campo de texto. El nombre de la tecla presionada se muestra en la consola.</p>
+                <pre><code>
+document.getElementById('keypressInput').addEventListener('keypress', function(event) {
+    console.log(`Tecla presionada: ${event.key}`);
+});
+                </code></pre>
+            </div>
+            <div class="event-explanation">
+                <h3>Evento Resize</h3>
+                <p>El evento resize ocurre cuando el usuario redimensiona la ventana del navegador. Un mensaje indicando que la ventana ha sido redimensionada se muestra en la página.</p>
+                <pre><code>
+window.addEventListener('resize', function() {
+    document.getElementById('resizeMessage').textContent = 'La ventana ha sido redimensionada';
+});
+                </code></pre>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

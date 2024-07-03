@@ -1,0 +1,42 @@
+/* Estilos para el cuerpo y el contenedor */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3; /* Color de fondo */
+}
+
+.container {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Espacio interno */
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #333; /* Color de fondo del menú */
+    padding: 10px; /* Espacio interno del menú */
+    text-align: center; /* Alineación del texto dentro del menú */
+}
+
+ul {
+    list-style-type: none; /* Quita los estilos de lista predeterminados */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px; /* Espacio entre los elementos de lista */
+}
+
+li a {
+    display: block; /* Cambia los enlaces a bloque para ocupar todo el ancho */
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+li a:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el mouse sobre los enlaces */
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalización de Tarjeta de Evento</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Personalización de Tarjeta de Evento</h1>
+    </header>
+    <main>
+        <section id="formulario">
+            <h2>Personalizar Tarjeta de Evento</h2>
+            <form id="form-personalizacion">
+                <label for="titulo">Título del Evento:</label>
+                <input type="text" id="titulo" required>
+                <label for="fecha">Fecha del Evento:</label>
+                <input type="date" id="fecha" required>
+                <label for="descripcion">Descripción del Evento:</label>
+                <input type="text" id="descripcion" required>
+                <button type="submit">Actualizar</button>
+            </form>
+        </section>
+        <section id="componente">
+            <event-card></event-card>
+        </section>
+    </main>
+    <script src="scripts/event-card.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

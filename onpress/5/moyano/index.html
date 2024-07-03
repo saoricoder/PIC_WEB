@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Component Example</title>
+</head>
+<body>
+    <h1>Interact with the Web Component</h1>
+    <form id="color-form">
+        <label for="color">Choose a color:</label>
+        <input type="color" id="color" name="color" required>
+        <input type="submit" value="Change Color">
+    </form>
+
+    <my-component id="my-component"></my-component>
+
+    <script src="js/my-component.js"></script>
+    <script>
+        document.getElementById('color-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const color = document.getElementById('color').value;
+            document.getElementById('my-component').setAttribute('color', color);
+        });
+    </script>
+</body>
+</html>

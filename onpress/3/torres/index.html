@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Biblioteca</title>
+  <script src="js/script.js"></script>
+  <link href="css/estilo.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Gestión de Biblioteca</h1>
+
+  <h2>Agregar Libro</h2>
+  <form id="agregarLibroForm">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" required>
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" required>
+    <label for="isbn">ISBN:</label>
+    <input type="text" id="isbn" required>
+    <button type="submit">Agregar Libro</button>
+  </form>
+
+  <h2>Biblioteca</h2>
+  <div id="detallesBiblioteca"></div>
+
+  <h2>Usuarios</h2>
+  <form id="agregarUsuarioForm">
+    <label for="nombreUsuario">Nombre:</label>
+    <input type="text" id="nombreUsuario" required>
+    <label for="edadUsuario">Edad:</label>
+    <input type="number" id="edadUsuario" required>
+    <label for="idUsuario">ID Usuario:</label>
+    <input type="text" id="idUsuario" required>
+    <button type="submit">Agregar Usuario</button>
+  </form>
+  <div id="detallesUsuarios"></div>
+</body>
+</html>

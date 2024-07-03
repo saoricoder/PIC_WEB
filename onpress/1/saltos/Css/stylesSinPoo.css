@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(30, 28, 28);
+}
+
+#main-1 {
+    text-align: center;
+}
+
+label, input, button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(161, 32, 32);
+    color: white;
+    cursor: pointer;
+}
+
+#mensaje {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}

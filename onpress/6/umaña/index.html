@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos con Bootstrap Morado</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Eventos de Mouse</h5>
+            <p class="card-text">Haz clic en el botón para cambiar el color.</p>
+            <button id="colorChanger" class="btn btn-purple">Cambiar Color</button>
+            <div id="mouseEventInfo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Componente de formulario -->
+        <form-component></form-component>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Script personalizado -->
+  <script src="js/script.js"></script>
+  <!-- Componente de formulario personalizado -->
+  <script src="js/form-component.js" type="module"></script>
+</body>
+</html>

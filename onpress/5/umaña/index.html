@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Custom styles for the button */
+        .custom-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Custom styles for the image */
+        .custom-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <button class="custom-button">Click me!</button>
+    <img class="custom-image" src="assets/images/gatito.jpg" alt="Custom Image">
+    
+    <script>
+        // Custom button click event
+        const button = document.querySelector('.custom-button');
+        button.addEventListener('click', () => {
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+</html>

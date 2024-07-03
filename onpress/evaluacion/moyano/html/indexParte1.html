@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Ingresos</title>
+    <link rel="stylesheet" href="../css/parte1.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#ingreso">Ingresar Información</a>
+        <a href="#consulta">Consultar Información</a>
+        <a href="#lista">Listado de Ingresos</a>
+    </div>
+
+    <div id="content">
+        <!-- El contenido se cargará dinámicamente aquí -->
+    </div>
+
+    <script src="../js/controllers/ingresoController.js"></script>
+    <script>
+        // Función para cargar el contenido dinámicamente según la URL hash
+        function cargarContenido() {
+            let hash = window.location.hash;
+            let contentDiv = document.getElementById('content');
+
+            switch(hash) {
+                case '#ingreso':
+                    contentDiv.innerHTML = '';
+                    fetch('../js/views/ingresoForm.html')
+                        .then(response => response.text())
+                        .then(html => contentDiv.innerHTML = html);
+                    break;
+                case '#consulta':
+                    contentDiv.innerHTML = '';
+                    fetch('../js/views/consultaForm.html')
+                        .then(response => response.text())
+                        .then(html => contentDiv.innerHTML = html);
+                    break;
+                case '#lista':
+                    contentDiv.innerHTML = '';
+                    fetch('../js/views/listaIngresos.html')
+                        .then(response => response.text())
+                        .then(html => contentDiv.innerHTML = html);
+                    break;
+                default:
+                    contentDiv.innerHTML = '<h2>Página no encontrada</h2>';
+            }
+        }
+
+        // Cargar el contenido inicial
+        cargarContenido();
+
+        // Escuchar cambios en la URL hash para cargar el contenido correspondiente
+        window.addEventListener('hashchange', cargarContenido);
+    </script>
+</body>
+</html>

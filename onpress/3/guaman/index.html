@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components Example</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/form-example1.js" defer></script>
+    <script src="JS/form-example2.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <button id="btnExample1">Ejemplo 1</button>
+        <button id="btnExample2">Ejemplo 2</button>
+        <div id="formContainer"></div>
+    </div>
+    
+    <script>
+        document.getElementById('btnExample1').addEventListener('click', () => {
+            document.getElementById('formContainer').innerHTML = '<form-example1></form-example1>';
+        });
+
+        document.getElementById('btnExample2').addEventListener('click', () => {
+            document.getElementById('formContainer').innerHTML = '<form-example2></form-example2>';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Web ESPE</title>
+    <link rel="stylesheet" href="../CSS/style1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Universidad de las Fuerzas Armadas ESPE</h1>
+        <form id="data-form">
+            <input type="text" id="code" placeholder="Código" required>
+            <input type="text" id="description" placeholder="Descripción" required>
+            <button type="submit">Agregar</button>
+        </form>
+        <div id="controls">
+            <button id="list-all">Listado General</button>
+            <button id="search-code">Buscar por Código</button>
+            <button id="search-description">Buscar por Descripción</button>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="../JS/models.js"></script>
+    <script src="../JS/ui.js"></script>
+    <script src="../JS/app.js"></script>
+</body>
+</html>
