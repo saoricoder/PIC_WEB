@@ -1,0 +1,40 @@
+body {
+    padding-top: 20px;
+    background-color: #99bbdd;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 50px;
+}
+
+#formulario-reserva, #formulario-mesa {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.table {
+    margin-top: 20px;
+}
+
+
+
+h1 {
+    color: #343a40;
+    text-align: center;
+}
+.nav-pills .nav-link {
+    color: #007bff;
+    font-weight: bold;
+}
+.nav-pills .nav-link.active {
+    background-color: #007bff;
+    color: #ffffff;
+}

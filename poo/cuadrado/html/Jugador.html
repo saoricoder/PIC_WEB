@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Jugador</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <h1>Ingresar Jugador</h1>
+    <form id="jugadorForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="posicion">Posición:</label>
+        <input type="text" id="posicion" name="posicion"><br>
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" name="numero"><br>
+        <button type="button" onclick="guardarJugador()">Guardar Jugador</button>
+    </form>
+    <div id="resultado"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

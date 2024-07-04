@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Productos Tecnológicos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Gestión de Productos Tecnológicos</h1>
+        <div class="form-container">
+            <form id="product-form">
+                <label>Tipo de Producto:</label>
+                <div id="product-buttons">
+                    <button type="button" data-product-type="computer">Computadora</button>
+                    <button type="button" data-product-type="mobile">Teléfono Móvil</button>
+                    <button type="button" data-product-type="television">Televisión</button>
+                </div>
+
+                <input type="hidden" id="product-type" required>
+
+                <label for="product-name">Nombre del Producto:</label>
+                <input type="text" id="product-name" required>
+
+                <label for="product-price">Precio:</label>
+                <input type="number" id="product-price" required>
+
+                <div id="additional-fields"></div>
+
+                <button type="submit">Agregar Producto</button>
+                <button type="button" id="update-button" style="display:none;">Actualizar Producto</button>
+            </form>
+        </div>
+        <div class="product-list">
+            <h2>Lista de Productos</h2>
+            <ul id="products"></ul>
+        </div>
+    </div>
+    <script src="js/product.js"></script>
+    <script src="js/computer.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/television.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

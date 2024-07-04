@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Ingreso Paciente</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		 
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="../index.html">Principal <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="paciente.html">Paciente</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="consulta.html">Consulta</a>
+			  </li>
+		  </ul>
+		</div>
+	  </nav>
+    <div class="container mt-5">
+        <h2 class="text-center">Ingreso Paciente</h2>
+        <form id="formPaciente">
+            <div class="form-group">
+                <label for="nombreDueño">Nombre del Dueño</label>
+                <input type="text" id="nombreDueño" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="nombreMascota">Nombre de la Mascota</label>
+                <input type="text" id="nombreMascota" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="tipoMascota">Tipo de Mascota</label>
+                <input type="text" id="tipoMascota" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Paciente</button>
+        </form>
+
+        <h3 class="mt-5">Lista de Pacientes</h3>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Nombre del Dueño</th>
+                    <th>Nombre de la Mascota</th>
+                    <th>Tipo de Mascota</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listaPacientes"></tbody>
+        </table>
+    </div>
+    <script src="../JS/script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Producto - Sistema de Gestión de Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Eliminar Producto</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="html/products.html">Todos los Productos</a>
+            <a href="html/electronics.html">Electrónicos</a>
+            <a href="html/food.html">Alimenticios</a>
+            <a href="html/clothing.html">Ropa</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Formulario para Eliminar Producto</h2>
+            <form id="delete-product-form" action="eliminar_producto.php" method="POST">
+                <div class="input-group">
+                    <label for="id">ID del Producto:</label>
+                    <input type="text" id="id" name="id" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn-submit">Eliminar Producto</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

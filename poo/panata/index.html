@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Personal</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Sistema de Gestión de Personal</h1>
+        <div class="card mb-4">
+            <div class="card-body">
+                <form id="personal-form">
+                    <div class="form-group">
+                        <label>Tipo de Personal:</label>
+                        <div id="personal-buttons" class="btn-group btn-group-toggle d-flex" data-toggle="buttons">
+                            <button type="button" class="btn btn-outline-primary" data-personal-type="empleado">Empleado</button>
+                            <button type="button" class="btn btn-outline-primary" data-personal-type="gerente">Gerente</button>
+                            <button type="button" class="btn btn-outline-primary" data-personal-type="becario">Becario</button>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="tipo-personal" required>
+
+                    <div class="form-group">
+                        <label for="nombre-personal">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre-personal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edad-personal">Edad:</label>
+                        <input type="number" class="form-control" id="edad-personal" required>
+                    </div>
+
+                    <div id="campos-adicionales"></div>
+
+                    <button type="submit" class="btn btn-primary">Agregar Personal</button>
+                    <button type="button" id="actualizar-button" class="btn btn-warning" style="display:none;">Actualizar Personal</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Lista de Personal</h2>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="empleados-tab" data-toggle="tab" href="#empleados" role="tab" aria-controls="empleados" aria-selected="true">Empleados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="gerentes-tab" data-toggle="tab" href="#gerentes" role="tab" aria-controls="gerentes" aria-selected="false">Gerentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="becarios-tab" data-toggle="tab" href="#becarios" role="tab" aria-controls="becarios" aria-selected="false">Becarios</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="empleados" role="tabpanel" aria-labelledby="empleados-tab">
+                        <table class="table mt-3">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                    <th>Departamento</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="empleados-list"></tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="gerentes" role="tabpanel" aria-labelledby="gerentes-tab">
+                        <table class="table mt-3">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                    <th>Área</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="gerentes-list"></tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="becarios" role="tabpanel" aria-labelledby="becarios-tab">
+                        <table class="table mt-3">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                    <th>Universidad</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="becarios-list"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/personal.js"></script>
+    <script src="js/empleado.js"></script>
+    <script src="js/gerente.js"></script>
+    <script src="js/becario.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
