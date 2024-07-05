@@ -35,6 +35,7 @@ class form extends HTMLElement {
     this.h2.classList.add("subtitle");
     this.appendChild(this.h2);
     this.form = document.createElement("form");
+    this.p = document.createElement("p");
   }
   connectedCallback() {
     this.form.setAttribute("id", "form");
@@ -52,13 +53,15 @@ class form extends HTMLElement {
     `;
     this.appendChild(this.form);
     this.form.addEventListener("submit", (e) => {
-      e.preventDefault();
       alert("submited");
       customElements.define("windows-event", windows_event);
       this.h2.classList.add("hidden");
       this.form.classList.add("hidden");
       this.form.classList.remove("form_container");
+      this.p.classList.add("hidden");
     });
+    this.p.textContent = "Presione Enviar para el siguiente evento";
+    this.appendChild(this.p);
   }
 }
 class keyboard_event extends HTMLElement {
@@ -68,13 +71,46 @@ class keyboard_event extends HTMLElement {
     this.h2.textContent = "Eventos de Teclado";
     this.h2.classList.add("subtitle");
     this.appendChild(this.h2);
+    this.p = document.createElement("p");
+    this.p1 = document.createElement("p");
+    this.p2 = document.createElement("p");
+    this.nombre = document.createElement("p");
+    this.email = document.createElement("p");
   }
   connectedCallback() {
     console.log("funcionando Key event");
+    this.p.textContent = "(Evento KeyDown) Nombre: ";
+    this.appendChild(this.p);
+    this.nombre.setAttribute("id", "name");
+    this.appendChild(this.nombre);
+    this.p1.textContent = "(Evento KeyUp) Email:";
+    this.appendChild(this.p1);
+    this.email.setAttribute("id", "correo");
+    this.appendChild(this.email);
+
+    let nombre = document.getElementById("nombre");
+    let email = document.getElementById("email");
+    nombre.addEventListener("keydown", KeyDown);
+    email.addEventListener("keyup", keyUP);
     document.getElementById("form").addEventListener("submit", () => {
       this.h2.classList.add("hidden");
+      this.p.classList.add("hidden");
+      this.p1.classList.add("hidden");
+      this.p2.classList.add("hidden");
+      let nombre = document.getElementById("name");
+      nombre.innerHTML = "";
+      let email = document.getElementById("correo");
+      email.innerHTML = "";
       console.log("Key event adios");
     });
+    function KeyDown(event) {
+      let nombre = document.getElementById("name");
+      nombre.innerHTML += event.key;
+    }
+    function keyUP(event) {
+      let email = document.getElementById("correo");
+      email.innerHTML += event.key;
+    }
   }
 }
 class windows_event extends HTMLElement {
