@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Incidentes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <button class="btn btn-secondary" onclick="location.href='index.html'">Volver al Inicio</button>
+    <div class="container my-5">
+        <h2>Reportar Incidente</h2>
+        <form id="incidentForm">
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <select id="usuario" class="form-control" required></select>
+            </div>
+            <div class="form-group">
+                <label for="activo">Activo:</label>
+                <select id="activo" class="form-control" required></select>
+            </div>
+            <div class="form-group">
+                <label for="descripcionIncidente">Descripción:</label>
+                <input type="text" id="descripcionIncidente" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaIncidente">Fecha:</label>
+                <input type="date" id="fechaIncidente" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Reportar</button>
+        </form>
+    </div>
+    <script src="/js/incidentes.js"></script>
+</body>
+</html>
