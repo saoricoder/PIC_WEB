@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Seguridad Infantil Educativa</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Gestión de Seguridad Infantil Educativa</h1>
+    <form id="alumno-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad">
+        
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso">
+        
+        <label for="contactoEmergencia">Contacto de Emergencia:</label>
+        <input type="text" id="contactoEmergencia" name="contactoEmergencia">
+        
+        <button type="submit">Agregar Alumno</button>
+    </form>
+    
+    <form id="incidente-form">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+        
+        <label for="detalles">Detalles:</label>
+        <textarea id="detalles" name="detalles"></textarea>
+        
+        <label for="tipoIncidente">Tipo de Incidente:</label>
+        <input type="text" id="tipoIncidente" name="tipoIncidente">
+        
+        <button type="submit">Registrar Incidente</button>
+    </form>
+    
+    <form id="aviso-form">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+        
+        <label for="fechaEnvio">Fecha de Envío:</label>
+        <input type="date" id="fechaEnvio" name="fechaEnvio">
+        
+        <label for="destinatario">Destinatario:</label>
+        <input type="text" id="destinatario" name="destinatario">
+        
+        <button type="submit">Enviar Aviso</button>
+    </form>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>

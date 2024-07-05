@@ -1,45 +1,75 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa; /* Light cyan background for a calm feel */
+  padding-top: 20px;
 }
 
-h1 {
-    color: #333;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-form {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #ffccbc; /* Light orange border */
+  border-radius: 10px; /* Rounded corners for a softer look */
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.btn-group-toggle .btn {
+  flex: 1;
+  border-radius: 0;
+  background-color: #ff8a65; /* Light coral background */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.btn-group-toggle .btn:hover {
+  background-color: #ff7043; /* Darker coral on hover */
 }
 
-button {
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.form-group {
+  margin-bottom: 1rem;
 }
 
-button:hover {
-    background-color: #218838;
+.table {
+  margin-top: 1rem;
+  border-radius: 10px; /* Rounded corners for the table */
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  border: 1px solid #ffccbc; /* Light orange border */
+}
+
+.table th {
+  background-color: #ffccbc; /* Light orange background */
+  color: #333; /* Dark text */
+}
+
+.nav-tabs .nav-link {
+  color: #333; /* Dark text */
+  border: 1px solid #ffccbc; /* Light orange border */
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  background-color: #ffe0b2; /* Light peach background */
+}
+
+.nav-tabs .nav-link.active {
+  color: #fff; /* White text */
+  background-color: #ff8a65; /* Light coral active tab */
+  border-color: #ff8a65; /* Light coral border */
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+  color: #d84315; /* Dark orange for titles */
+}
+.result_container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5em 0;
 }

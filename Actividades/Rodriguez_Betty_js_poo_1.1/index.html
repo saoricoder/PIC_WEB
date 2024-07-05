@@ -1,54 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestión de Seguridad Infantil Educativa</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <h1>Gestión de Seguridad Infantil Educativa</h1>
-    <form id="alumno-form">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-        
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad">
-        
-        <label for="curso">Curso:</label>
-        <input type="text" id="curso" name="curso">
-        
-        <label for="contactoEmergencia">Contacto de Emergencia:</label>
-        <input type="text" id="contactoEmergencia" name="contactoEmergencia">
-        
-        <button type="submit">Agregar Alumno</button>
-    </form>
-    
-    <form id="incidente-form">
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" name="fecha">
-        
-        <label for="detalles">Detalles:</label>
-        <textarea id="detalles" name="detalles"></textarea>
-        
-        <label for="tipoIncidente">Tipo de Incidente:</label>
-        <input type="text" id="tipoIncidente" name="tipoIncidente">
-        
-        <button type="submit">Registrar Incidente</button>
-    </form>
-    
-    <form id="aviso-form">
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-        
-        <label for="fechaEnvio">Fecha de Envío:</label>
-        <input type="date" id="fechaEnvio" name="fechaEnvio">
-        
-        <label for="destinatario">Destinatario:</label>
-        <input type="text" id="destinatario" name="destinatario">
-        
-        <button type="submit">Enviar Aviso</button>
-    </form>
-    
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Gestión de Seguridad Infantil Educativa</h1>
+      <div class="card mb-4">
+        <div class="card-body">
+          <form id="alumno-form">
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="edad">Edad:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="edad"
+                name="edad"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="curso">Curso:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="curso"
+                name="curso"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contactoEmergencia">Contacto de Emergencia:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="contactoEmergencia"
+                name="contactoEmergencia"
+                required
+              />
+            </div>
+            <button id="agregar" class="btn btn-primary">Agregar Alumno</button>
+            <button
+              style="display: none"
+              id="actualizar-button"
+              class="btn btn-primary"
+            >
+              Actualizar
+            </button>
+          </form>
+        </div>
+        <div id="alumnos-list"></div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <form id="incidente-form">
+            <div class="form-group">
+              <label for="fecha">Fecha:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="fecha"
+                name="fecha"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="detalles">Detalles:</label>
+              <textarea
+                class="form-control"
+                id="detalles"
+                name="detalles"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="tipoIncidente">Tipo de Incidente:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="tipoIncidente"
+                name="tipoIncidente"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Registrar Incidente
+            </button>
+          </form>
+        </div>
+        <div id="incidentes-list"></div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <form id="aviso-form">
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                class="form-control"
+                id="mensaje"
+                name="mensaje"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="fechaEnvio">Fecha de Envío:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="fechaEnvio"
+                name="fechaEnvio"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="destinatario">Destinatario:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="destinatario"
+                name="destinatario"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Aviso</button>
+          </form>
+        </div>
+        <div id="avisos-list"></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
