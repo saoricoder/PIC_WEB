@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Seleccionable de Prendas de Ropa</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Seleccione una prenda de ropa</h1>
+    <select id="prendas" onchange="mostrarPrenda()">
+        <option value="0">Seleccione una prenda</option>
+        <option value="1">Camiseta</option>
+        <option value="2">Pantalón</option>
+        <option value="3">Chaqueta</option>
+        <option value="4">Falda</option>
+        <option value="5">Vestido</option>
+        <option value="6">Abrigo</option>
+    </select>
+
+    <div name="prenda" id="prenda1" class="hidden">Camiseta - Esta es la descripción de la camiseta</div>
+    <div name="prenda" id="prenda2" class="hidden">Pantalón - Esta es la descripción del pantalón</div>
+    <div name="prenda" id="prenda3" class="hidden">Chaqueta - Esta es la descripción de la chaqueta</div>
+    <div name="prenda" id="prenda4" class="hidden">Falda - Esta es la descripción de la falda</div>
+    <div name="prenda" id="prenda5" class="hidden">Vestido - Esta es la descripción del vestido</div>
+    <div name="prenda" id="prenda6" class="hidden">Abrigo - Esta es la descripción del abrigo</div>
+
+    <script>
+        // Ocultar todas las prendas al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            var prendas = document.querySelectorAll('[name="prenda"]');
+            prendas.forEach(function(prenda) {
+                prenda.classList.add('hidden');
+            });
+        });
+
+        function mostrarPrenda() {
+            // Ocultar todas las prendas
+            var prendas = document.querySelectorAll('[name="prenda"]');
+            prendas.forEach(function(prenda) {
+                prenda.classList.add('hidden');
+                prenda.classList.remove('visible');
+            });
+
+            // Obtener el valor seleccionado del menú
+            var seleccion = document.querySelector('#prendas').value;
+
+            // Mostrar la prenda correspondiente
+            if (seleccion > 0 && seleccion <= 6) {
+                var prendaSeleccionada = document.querySelector('#prenda' + seleccion);
+                prendaSeleccionada.classList.remove('hidden');
+                prendaSeleccionada.classList.add('visible');
+            }
+        }
+    </script>
+</body>
+
+</html>
