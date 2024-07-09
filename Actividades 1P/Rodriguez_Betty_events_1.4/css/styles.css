@@ -1,53 +1,93 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Fondo blanco */
-  }
-  
-  .container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f3e7f7; /* Rosa muy claro */
-    padding: 2rem;
-  }
-  
-  .titulo {
-    color: #8a3ab9; /* Lila */
-    margin-bottom: 1rem;
-  }
-  
-  .event_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .event_container a {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #ea80fc; /* Rosa */
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .event_container a:hover {
-    background-color: #c64fd9; /* Rosa más oscuro al hacer hover */
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Fondo blanco */
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3e7f7; /* Rosa muy claro */
+  padding: 2rem;
+}
+
+.titulo {
+  color: #8a3ab9; /* Lila */
+  margin-bottom: 1rem;
+}
+
+.event_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.event_container a {
+  display: flex;
+  padding: 15px 30px;
+  background-color: #ea80fc; /* Rosa */
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.event_container a:hover {
+  background-color: #c64fd9; /* Rosa más oscuro al hacer hover */
+}
+
+.hidden {
+  display: none;
+}
+.boton {
+  padding: 1rem;
+  background: green;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 auto;
+  width: 325px;
+}
+
+.item_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+input.input {
+  height: 30px;
+  margin: 0.3rem;
+}
+.submit {
+  margin: 0.3rem auto;
+  width: 100px;
+  height: 30px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 50vw;
+}
+p {
+  text-align: center;
+}
+.teclado {
+  width: 100%;
+}
