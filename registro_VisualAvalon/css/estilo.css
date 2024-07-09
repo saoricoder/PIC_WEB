@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor_todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja_trasera{
+    width: 100%;
+    padding: 10px 20 px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: turquoise;
+}
+
+.caja_trasera div{
+    margin: 100px 40 px;
+    color: white;
+    transition: all 500ms;
+}
+
+.caja_trasera div p,
+.caja_trasera div button{
+    margin: 30 px;
+}
+
+.caja_trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja_trasera button{
+    padding: 10px 40px;
+    border: 2px solid white;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color:wheat;
+    outline: none;
+    transform: all 300ms;
+}
+
+.caja_trasera button :hover{
+    background: white;
+    color: blue;
+}
+/*Formularios*/
+.contenedor_login-register{
+    display: flex;
+    align-items:center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -85px;
+}
+.contenedor_login-register{
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+/*27:24*/
