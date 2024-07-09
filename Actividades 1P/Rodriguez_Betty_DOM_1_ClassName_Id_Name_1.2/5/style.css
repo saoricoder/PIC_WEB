@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    color: #333; /* Texto gris oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #4a4a4a; /* Título gris oscuro */
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: white;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #666; /* Borde gris oscuro al enfocar */
+}
+
+.prenda {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 5px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .prenda {
+        width: 90%; /* Ancho del 90% para pantallas pequeñas */
+    }
+}
