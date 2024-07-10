@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado Seleccionable de Prendas de Ropa</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="titulo_menu">Manejo de elementos del dom</h1>
+      <main>
+        <h2 class="subtitle_menu">Menú de manejo del DOM (querySelector)</h2>
+        <nav id="menu-contain">
+          <input type="checkbox" id="menu_main" />
+          <label for="menu_main">Menu del DOM</label>
+          <ul>
+            <li>
+              <a href="../prendas_vestir_className/"
+                >Prendas_vestir_className</a
+              >
+            </li>
+            <li>
+              <a href="../prendas_vestir_Id/">Prendas_vestir_Id</a>
+            </li>
+            <li>
+              <a href="../prendas_vestir_Name/">Prendas_vestir_Name</a>
+            </li>
+            <li>
+              <a href="../">Home</a>
+            </li>
+            <li>
+              <a href="../prendas_vestir_querySelectorAll/"
+                >Prendas_vestir_querySelectorAll</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </main>
+    </div>
+    <h1>Seleccione una prenda de ropa</h1>
+    <select id="prendas" onchange="mostrarPrenda()">
+      <option value="0">Seleccione una prenda</option>
+      <option value="1">Camiseta</option>
+      <option value="2">Pantalón</option>
+      <option value="3">Chaqueta</option>
+      <option value="4">Falda</option>
+      <option value="5">Vestido</option>
+      <option value="6">Abrigo</option>
+    </select>
+
+    <div name="prenda" id="prenda1" class="hidden">
+      Camiseta - Esta es la descripción de la camiseta
+    </div>
+    <div name="prenda" id="prenda2" class="hidden">
+      Pantalón - Esta es la descripción del pantalón
+    </div>
+    <div name="prenda" id="prenda3" class="hidden">
+      Chaqueta - Esta es la descripción de la chaqueta
+    </div>
+    <div name="prenda" id="prenda4" class="hidden">
+      Falda - Esta es la descripción de la falda
+    </div>
+    <div name="prenda" id="prenda5" class="hidden">
+      Vestido - Esta es la descripción del vestido
+    </div>
+    <div name="prenda" id="prenda6" class="hidden">
+      Abrigo - Esta es la descripción del abrigo
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
