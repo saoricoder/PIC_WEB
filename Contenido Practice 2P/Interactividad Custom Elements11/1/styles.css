@@ -1,0 +1,12 @@
+like-button{
+    width: 100px;
+    height: 50%;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+like-button liked {
+    background-color: #0f0;
+}

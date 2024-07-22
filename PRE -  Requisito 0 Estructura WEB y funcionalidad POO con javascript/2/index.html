@@ -1,0 +1,76 @@
+<!--ESTRUCTURA DE CONTENIDOS WEB HTML5, CSS, JAVASCRIPT-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Página web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1>Bienvenido a mi Página web</h1>
+                <nav>
+                    <ul>
+                        <li> <a href="#">Inicio</a></li>
+                        <li> <a href="#about">Acerca de</a></li>
+                        <li> <a href="#services">Servicios</a></li>
+                        <li> <a href="#gallery">Galería</a></li>
+                        <li> <a href="#contact">Contactos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <section id="about">
+                    <h2> Acerca de</h2>
+                    <p>Esta página de ejemplo creada para demortar la estructura básica de un proyecto web.</p>
+                    <img src="images/IMG_8986.JPG" alt="Imagen sobre nosotros" class="reponsive.img">
+                    <button id="learn-more">Aprender más</button>
+                </section>
+
+                <section id="services">
+                    <h2>Servicios</h2>
+                    <p>Ofrecemos unavariedad de servicios para satisfaces sus necesodades.</p>
+                    <img src="images/IMG_9103.JPG" alt="Imagen de servicios" class="responsive-img">
+                    <button id="contact-us">Cóntactanos</button>
+                </section>
+
+                <section id="Gallery">
+                    <h2>Galería</h2>
+                    <div class="gallery">
+                        <img src="images/IMG_8986.JPG" alt="Galería 1" class="gallery-img">
+                        <img src="images/IMG_9103.JPG" alt="Galería 2" class="gallery-img">
+                        <img src="images/IMG_8986.JPG" alt="Galería 3" class="gallery">
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <h2>Contacto</h2>
+                    <form id="contact-form">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Mensaje:</label>
+                        <textarea name="message" id="message" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mi pagina web. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

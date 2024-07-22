@@ -1,0 +1,47 @@
+/*Contenedor pricipal */
+.wrapper{
+    flex: 1;
+}
+
+/*Contenedor*/
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*Estilos del encabezado*/
+header{
+    background: #35424a;
+    color: #fff;
+    padding-top: 30%;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid ;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul{
+    padding: 0;
+    list-style: none;
+}
+
+header li{
+    display: inline;
+    padding: 0  20px;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+/*Estilos del contenido principal*/
+main{
+    margin-top: auto;
+}
