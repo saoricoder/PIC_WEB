@@ -1,7 +1,0 @@
-{
-  "name": "tarea2.1",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
