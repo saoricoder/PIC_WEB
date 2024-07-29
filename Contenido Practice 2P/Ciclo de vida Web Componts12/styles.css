@@ -1,0 +1,35 @@
+/*Estilos generales*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+/*Estilos especifícos del componente*/
+task-item{
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid#ccc;
+    padding: 10px;
+}
+
+#task{
+    display: flex;
+    align-items: center;
+}
+
+#delete-btn{
+    margin: auto;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#detele-btn:hover{
+    background-color: #d32f2f;
+}
