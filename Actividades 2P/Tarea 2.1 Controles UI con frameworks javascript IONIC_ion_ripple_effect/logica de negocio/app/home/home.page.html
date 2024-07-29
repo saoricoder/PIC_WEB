@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Destinos de viaje </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Explora Destinos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenedor de tarjetas de viaje -->
+  <div class="card-container">
+    <div
+      class="card ion-activatable ripple-parent"
+      (click)="showImage('assets/paris.jpg')"
+    >
+      <ion-ripple-effect></ion-ripple-effect>
+      <h2>París</h2>
+      <p>
+        La ciudad de la luz te espera con sus monumentos icónicos y su vibrante
+        vida cultural.
+      </p>
+    </div>
+    <div
+      class="card ion-activatable ripple-parent"
+      (click)="showImage('assets/tokio.jpg')"
+    >
+      <ion-ripple-effect></ion-ripple-effect>
+      <h2>Tokio</h2>
+      <p>
+        Sumérgete en la cultura única de Tokio, donde lo moderno se encuentra
+        con lo tradicional.
+      </p>
+    </div>
+    <div
+      class="card ion-activatable ripple-parent"
+      (click)="showImage('assets/nueva york.jpeg')"
+    >
+      <ion-ripple-effect></ion-ripple-effect>
+      <h2>Nueva York</h2>
+      <p>
+        Explora la gran manzana, famosa por sus rascacielos, Broadway y su
+        diversa gastronomía.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sección para mostrar la imagen -->
+  <div class="image-overlay" *ngIf="selectedImage">
+    <div class="image-content">
+      <ion-button class="close-button" (click)="closeImage()"
+        >Cerrar</ion-button
+      >
+      <img [src]="selectedImage" />
+    </div>
+  </div>
+</ion-content>
+
+<!-- Pie de página -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>© 2024 Saoricoder</ion-title>
+  </ion-toolbar>
+</ion-footer>
